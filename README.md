@@ -1,6 +1,6 @@
 # The price of unreachable perfection: dimension laws at every regular scale
 
-Seth Douglas and Nidhal Mghirbi. Version 1.0.1, October 2026. A preprint; it has not been peer reviewed.
+Seth Douglas and Nidhal Mghirbi. Version 1.0.1, October 2026. DOI: [10.5281/zenodo.23774171](https://doi.org/10.5281/zenodo.23774171). Concept DOI (all versions): [10.5281/zenodo.23754198](https://doi.org/10.5281/zenodo.23754198). A preprint; it has not been peer reviewed.
 
 Version 1.0.1 changes packaging only. It adds the recorded check outputs (the `*.log` files listed in the checksum manifests), which the version 1.0.0 repository omitted, stores every file byte for byte so that all SHA-256 manifests verify from a fresh clone, and refreshes one stale manifest entry. The paper (`paper/main.pdf`, dated version 1.0.0) is unchanged. Version 1.0.0: [10.5281/zenodo.23754199](https://doi.org/10.5281/zenodo.23754199). All versions: [10.5281/zenodo.23754198](https://doi.org/10.5281/zenodo.23754198).
 

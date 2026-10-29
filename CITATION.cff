@@ -3,6 +3,7 @@ message: "Please cite the paper; this repository supplies its LaTeX source and i
 type: software
 title: "The price of unreachable perfection: dimension laws at every regular scale"
 version: 1.0.1
+doi: "10.5281/zenodo.23774171"
 date-released: 2026-10-29
 abstract: "How expensive is an optimum that a finite quantum system can approach but never attain? For a fixed finite rational nonlocal game of quantum value one, write A_G(n)=log2 D_G(2^(−n)), where D_G is the least local dimension at loss 2^(−n). We prescribe log2 A_G(n) at every logarithmic-space, nondecreasing unit-increment scale F with F(n)/log n → ∞, up to an additive O(log n+log²(F(n)+2)) error, and match the one-way distillable entanglement of the original mixed strategy state. At every asymptotically flat such scale, the positive finite lower and upper normalized dimension endpoints are exactly the ordered pairs with lower endpoint in Σ⁰₂ and upper endpoint in Π⁰₂; existing positive limits are exactly Δ⁰₂. A single uniform spectral-tail construction supplies the density-free profile law behind these results. It also classifies stretched-scale pairs in the unit square and gives quasi-polynomial dimension windows of width three in the exponent. A computable unit-increment target outside every rational game's profile shows that computability alone is insufficient. We locate the boundaries through a quantitative locality cap, an honest-linear compression cap, and an explicitly conditional route to finite exponents above one. A separate exact-marginal correlation theorem identifies a Farey law and its Diophantine endpoint curve. The dimension arithmetic necessity applies to all rational games; the operational realization statements concern the constructed games."
 license:
@@ -24,4 +25,5 @@ preferred-citation:
       given-names: Nidhal
   year: 2026
   version: 1.0.1
+  doi: "10.5281/zenodo.23774171"
   notes: "Preprint. The paper is licensed CC BY 4.0 and the scripts MIT or Apache 2.0; see RIGHTS.md."
