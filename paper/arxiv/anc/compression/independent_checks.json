@@ -1,0 +1,120 @@
+{
+  "Table5_exhaustive": {
+    "checks": 410956,
+    "PASS": true,
+    "cases": [
+      {
+        "X": 1,
+        "L": 3,
+        "alphabet": 78,
+        "counts": {
+          "equality": 78,
+          "clause": 114,
+          "first_input": 2,
+          "second_input": 2,
+          "trivial": 5888
+        },
+        "losing_pairs": 114,
+        "loss": "19/1014",
+        "loss_float": 0.01873767258382643
+      },
+      {
+        "X": 1,
+        "L": 5,
+        "alphabet": 310,
+        "counts": {
+          "equality": 310,
+          "clause": 610,
+          "first_input": 2,
+          "second_input": 2,
+          "trivial": 95176
+        },
+        "losing_pairs": 610,
+        "loss": "61/9610",
+        "loss_float": 0.0063475546305931324
+      },
+      {
+        "X": 2,
+        "L": 3,
+        "alphabet": 234,
+        "counts": {
+          "equality": 234,
+          "clause": 456,
+          "first_input": 8,
+          "second_input": 8,
+          "trivial": 54050
+        },
+        "losing_pairs": 456,
+        "loss": "38/4563",
+        "loss_float": 0.008327854481700635
+      },
+      {
+        "X": 2,
+        "L": 4,
+        "alphabet": 504,
+        "counts": {
+          "equality": 504,
+          "clause": 1184,
+          "first_input": 8,
+          "second_input": 8,
+          "trivial": 252312
+        },
+        "losing_pairs": 1184,
+        "loss": "37/7938",
+        "loss_float": 0.004661123708742756
+      }
+    ],
+    "note": "All four table rows and reversed orientations; clause rejection deliberately maximal."
+  },
+  "stopping_cap_6_5": {
+    "checks": 400,
+    "PASS": true,
+    "max_cost_over_bound": 0.7254221466281068
+  },
+  "conditional_corner_rank_6_6": {
+    "checks": 800,
+    "PASS": true
+  },
+  "conditional_schedule_and_cost": {
+    "checks": 202,
+    "PASS": true,
+    "cumulative_bound_counterexamples": [
+      {
+        "k": 20,
+        "log2_N_previous_over_claimed_bound": 128.8694816044856
+      },
+      {
+        "k": 100,
+        "log2_N_previous_over_claimed_bound": 1779.3793512528016
+      },
+      {
+        "k": 400,
+        "log2_N_previous_over_claimed_bound": 15162.371299393355
+      }
+    ],
+    "normalized_asymptotics": [
+      {
+        "k": 100,
+        "log2_sum_N_over_k_squared": 1.0786037562735553
+      },
+      {
+        "k": 400,
+        "log2_sum_N_over_k_squared": 1.0448188672363738
+      },
+      {
+        "k": 2000,
+        "log2_sum_N_over_k_squared": 1.0213441613616552
+      },
+      {
+        "k": 6000,
+        "log2_sum_N_over_k_squared": 1.0125734115801632
+      }
+    ]
+  },
+  "summary": {
+    "PASS": true,
+    "groups": 4,
+    "elapsed_seconds": 0.16333746910095215,
+    "total_checks": 412358
+  }
+}

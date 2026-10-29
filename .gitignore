@@ -1,0 +1,9 @@
+build/
+*.aux
+*.log
+*.out
+*.toc
+*.blg
+*.fls
+*.fdb_latexmk
+__pycache__/

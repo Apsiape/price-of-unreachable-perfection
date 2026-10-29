@@ -1,0 +1,7 @@
+{
+  "PASS": true,
+  "window_cases": 60,
+  "max_count_deviation": 55.0,
+  "fair_cylinder_depths": 10,
+  "marker_is_not_a_relator": true
+}

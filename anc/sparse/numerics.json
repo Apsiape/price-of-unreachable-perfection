@@ -1,0 +1,335 @@
+{
+  "status": "PASS",
+  "counter_program": {
+    "controls": 204,
+    "registers": 10,
+    "pulses": 40,
+    "instructions": 9164425,
+    "largest_counter": 65536,
+    "max_observed_time_ratio": 53.3125,
+    "table": [
+      {
+        "j": 1,
+        "k": 1,
+        "instructions": 853,
+        "instructions_over_j_plus_1_pow_4": 53.3125
+      },
+      {
+        "j": 2,
+        "k": 1,
+        "instructions": 1103,
+        "instructions_over_j_plus_1_pow_4": 13.617283950617283
+      },
+      {
+        "j": 4,
+        "k": 2,
+        "instructions": 4073,
+        "instructions_over_j_plus_1_pow_4": 6.5168
+      },
+      {
+        "j": 8,
+        "k": 4,
+        "instructions": 28013,
+        "instructions_over_j_plus_1_pow_4": 4.269623532998018
+      },
+      {
+        "j": 16,
+        "k": 8,
+        "instructions": 311541,
+        "instructions_over_j_plus_1_pow_4": 3.7300918331916524
+      },
+      {
+        "j": 32,
+        "k": 13,
+        "instructions": 3913283,
+        "instructions_over_j_plus_1_pow_4": 3.299783881051099
+      },
+      {
+        "j": 40,
+        "k": 15,
+        "instructions": 9164425,
+        "instructions_over_j_plus_1_pow_4": 3.243170600769138
+      }
+    ]
+  },
+  "histories": {
+    "scalar_transitions": 24570,
+    "arithmetic": "exact Fractions",
+    "periods": [
+      2,
+      8,
+      32,
+      128,
+      512,
+      2048
+    ],
+    "input_count": 9,
+    "scope": "complete controller and calibration scalar equations on these periods; no lamp source"
+  },
+  "counts_and_envelopes": {
+    "exact_count_prefix": 200000,
+    "envelopes": [
+      {
+        "order": 1,
+        "observed_log2_constant": 0,
+        "maximizing_ell": 0,
+        "analytic_log2_bound": 0.10546875
+      },
+      {
+        "order": 2,
+        "observed_log2_constant": 2,
+        "maximizing_ell": 1,
+        "analytic_log2_bound": 2.6875
+      },
+      {
+        "order": 3,
+        "observed_log2_constant": 10,
+        "maximizing_ell": 8,
+        "analytic_log2_bound": 10.54296875
+      },
+      {
+        "order": 4,
+        "observed_log2_constant": 30,
+        "maximizing_ell": 27,
+        "analytic_log2_bound": 30.0
+      },
+      {
+        "order": 5,
+        "observed_log2_constant": 69,
+        "maximizing_ell": 46,
+        "analytic_log2_bound": 69.91796875
+      },
+      {
+        "order": 6,
+        "observed_log2_constant": 141,
+        "maximizing_ell": 84,
+        "analytic_log2_bound": 141.6875
+      },
+      {
+        "order": 7,
+        "observed_log2_constant": 259,
+        "maximizing_ell": 140,
+        "analytic_log2_bound": 259.23046875
+      },
+      {
+        "order": 8,
+        "observed_log2_constant": 439,
+        "maximizing_ell": 216,
+        "analytic_log2_bound": 439.0
+      },
+      {
+        "order": 9,
+        "observed_log2_constant": 699,
+        "maximizing_ell": 294,
+        "analytic_log2_bound": 699.98046875
+      },
+      {
+        "order": 10,
+        "observed_log2_constant": 1063,
+        "maximizing_ell": 409,
+        "analytic_log2_bound": 1063.6875
+      },
+      {
+        "order": 11,
+        "observed_log2_constant": 1554,
+        "maximizing_ell": 555,
+        "analytic_log2_bound": 1554.16796875
+      },
+      {
+        "order": 12,
+        "observed_log2_constant": 2198,
+        "maximizing_ell": 729,
+        "analytic_log2_bound": 2198.0
+      },
+      {
+        "order": 13,
+        "observed_log2_constant": 3024,
+        "maximizing_ell": 916,
+        "analytic_log2_bound": 3024.29296875
+      },
+      {
+        "order": 14,
+        "observed_log2_constant": 4064,
+        "maximizing_ell": 1140,
+        "analytic_log2_bound": 4064.6875
+      },
+      {
+        "order": 15,
+        "observed_log2_constant": 5353,
+        "maximizing_ell": 1410,
+        "analytic_log2_bound": 5353.35546875
+      },
+      {
+        "order": 16,
+        "observed_log2_constant": 6927,
+        "maximizing_ell": 1728,
+        "analytic_log2_bound": 6927.0
+      },
+      {
+        "order": 17,
+        "observed_log2_constant": 8824,
+        "maximizing_ell": 2048,
+        "analytic_log2_bound": 8824.85546875
+      },
+      {
+        "order": 18,
+        "observed_log2_constant": 11088,
+        "maximizing_ell": 2437,
+        "analytic_log2_bound": 11088.6875
+      },
+      {
+        "order": 19,
+        "observed_log2_constant": 13762,
+        "maximizing_ell": 2867,
+        "analytic_log2_bound": 13762.79296875
+      },
+      {
+        "order": 20,
+        "observed_log2_constant": 16894,
+        "maximizing_ell": 3375,
+        "analytic_log2_bound": 16894.0
+      },
+      {
+        "order": 21,
+        "observed_log2_constant": 20531,
+        "maximizing_ell": 3880,
+        "analytic_log2_bound": 20531.66796875
+      },
+      {
+        "order": 22,
+        "observed_log2_constant": 24727,
+        "maximizing_ell": 4464,
+        "analytic_log2_bound": 24727.6875
+      },
+      {
+        "order": 23,
+        "observed_log2_constant": 29536,
+        "maximizing_ell": 5108,
+        "analytic_log2_bound": 29536.48046875
+      },
+      {
+        "order": 24,
+        "observed_log2_constant": 35015,
+        "maximizing_ell": 5832,
+        "analytic_log2_bound": 35015.0
+      }
+    ],
+    "lower_bound_leading_term_table": [
+      {
+        "n": 4096,
+        "k_n_over_2": 304,
+        "2k_over_n": 0.1484375,
+        "2k_over_log2_n": 50.666666666666664
+      },
+      {
+        "n": 65536,
+        "k_n_over_2": 2435,
+        "2k_over_n": 0.074310302734375,
+        "2k_over_log2_n": 304.375
+      },
+      {
+        "n": 1048576,
+        "k_n_over_2": 19483,
+        "2k_over_n": 0.03716087341308594,
+        "2k_over_log2_n": 1948.3
+      },
+      {
+        "n": 16777216,
+        "k_n_over_2": 155871,
+        "2k_over_n": 0.018581271171569824,
+        "2k_over_log2_n": 12989.25
+      },
+      {
+        "n": 268435456,
+        "k_n_over_2": 1246974,
+        "2k_over_n": 0.009290680289268494,
+        "2k_over_log2_n": 89069.57142857143
+      },
+      {
+        "n": 4294967296,
+        "k_n_over_2": 9975792,
+        "2k_over_n": 0.004645340144634247,
+        "2k_over_log2_n": 623487.0
+      }
+    ],
+    "warning": "table omits unknown imported constants and does not evaluate optimized D_G"
+  },
+  "near_exponential_program": {
+    "pulses": 100000,
+    "instructions": 2197576,
+    "controls": 33,
+    "registers": 6,
+    "table": [
+      {
+        "j": 100,
+        "ones": 25,
+        "density": 0.25,
+        "k_times_log2_j_over_j": 1.660964047443681,
+        "instructions": 2292,
+        "instructions_per_pulse": 22.92
+      },
+      {
+        "j": 1000,
+        "ones": 135,
+        "density": 0.135,
+        "k_times_log2_j_over_j": 1.3453808784293817,
+        "instructions": 19310,
+        "instructions_per_pulse": 19.31
+      },
+      {
+        "j": 10000,
+        "ones": 909,
+        "density": 0.0909,
+        "k_times_log2_j_over_j": 1.207853055301045,
+        "instructions": 255125,
+        "instructions_per_pulse": 25.5125
+      },
+      {
+        "j": 100000,
+        "ones": 6911,
+        "density": 0.06911,
+        "k_times_log2_j_over_j": 1.147892253188328,
+        "instructions": 2197576,
+        "instructions_per_pulse": 21.97576
+      }
+    ]
+  },
+  "negative_control": {
+    "rows": [
+      {
+        "log_N": 16.0,
+        "moment_decay_power": 1.0197814405382262,
+        "log_expected_penalty_squared": -17.70279740973151,
+        "orders_certified_eventually_at_this_point": 1
+      },
+      {
+        "log_N": 64.0,
+        "moment_decay_power": 1.4252465486463906,
+        "log_expected_penalty_squared": -92.60207347448889,
+        "orders_certified_eventually_at_this_point": 1
+      },
+      {
+        "log_N": 256.0,
+        "moment_decay_power": 1.7129286210981716,
+        "log_expected_penalty_squared": -439.8960213622518,
+        "orders_certified_eventually_at_this_point": 1
+      },
+      {
+        "log_N": 1024.0,
+        "moment_decay_power": 1.9360721724123813,
+        "log_expected_penalty_squared": -1983.9241989113982,
+        "orders_certified_eventually_at_this_point": 1
+      },
+      {
+        "log_N": 4096.0,
+        "moment_decay_power": 2.118393729206336,
+        "log_expected_penalty_squared": -8678.327009190272,
+        "orders_certified_eventually_at_this_point": 2
+      }
+    ],
+    "meaning": "fixed-order assumptions alone cannot justify choosing a growing moment order; this is an abstract spectral countermodel, not a game"
+  },
+  "elapsed_seconds": 15.055275900056586,
+  "single_thread": true,
+  "dependencies": "Python standard library only"
+}

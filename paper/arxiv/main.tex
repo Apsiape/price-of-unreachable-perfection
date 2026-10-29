@@ -1,0 +1,53 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=28mm]{geometry}
+\usepackage{booktabs,array,longtable,microtype}
+\usepackage{xcolor}
+\usepackage[hyperfootnotes=false,colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\setlength{\emergencystretch}{3em}
+\frenchspacing
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\newcommand{\N}{\mathbb N}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\tr}{\operatorname{tr}}
+\newcommand{\ED}{E_D^{A\to B}}
+\newcommand{\EF}{E_F}
+\newcommand{\usable}{d_G^{\to}}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\wn}[1]{\lVert #1\rVert_\rho}
+\newcommand{\clog}{\log_2}
+\newcommand{\Ftwo}{\mathbb F_2}
+\hypersetup{pdftitle={The price of unreachable perfection: dimension laws at every regular scale},pdfauthor={Seth Douglas and Nidhal Mghirbi}}
+\title{The price of unreachable perfection:\\dimension laws at every regular scale}
+\author{Seth Douglas \and Nidhal Mghirbi}
+\date{Version 1.0.0, October 2026}
+\begin{document}
+\maketitle
+\begingroup\renewcommand{\thefootnote}{}\footnotetext{The authors developed this work with AI models from more than one developer and take responsibility for every claim. How the work was done, and what the machine checks cover, is described at the end of the paper.}\endgroup
+\begin{abstract}
+How expensive is an optimum that a finite quantum system can approach but never attain? For a fixed finite rational nonlocal game of quantum value one, write $A_G(n)=\log_2D_G(2^{-n})$, where $D_G$ is the least local dimension at loss $2^{-n}$. We prescribe $\log_2 A_G(n)$ at every logarithmic-space, nondecreasing unit-increment scale $F$ with $F(n)/\log n\to\infty$, up to an additive $O(\log n+\log^2(F(n)+2))$ error, and match the one-way distillable entanglement of the original mixed strategy state. At every asymptotically flat such scale, the positive finite lower and upper normalized dimension endpoints are exactly the ordered pairs with lower endpoint in $\Sigma^0_2$ and upper endpoint in $\Pi^0_2$; existing positive limits are exactly $\Delta^0_2$. A single uniform spectral-tail construction supplies the density-free profile law behind these results. It also classifies stretched-scale pairs in the unit square and gives quasi-polynomial dimension windows of width three in the exponent. A computable unit-increment target outside every rational game's profile shows that computability alone is insufficient. We locate the boundaries through a quantitative locality cap, an honest-linear compression cap, and an explicitly conditional route to finite exponents above one. A separate exact-marginal correlation theorem identifies a Farey law and its Diophantine endpoint curve. The dimension arithmetic necessity applies to all rational games; the operational realization statements concern the constructed games.
+\end{abstract}
+\clearpage
+\input{sections/introduction}
+\input{sections/source}
+\input{sections/profiles}
+\input{sections/scales}
+\input{sections/boundaries}
+\input{sections/diophantine}
+\input{sections/discussion}
+\appendix
+\input{sections/checks}
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

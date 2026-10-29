@@ -1,0 +1,114 @@
+\section{Arithmetic laws, windows and a time obstruction}\label{sec:scales}
+\begin{lemma}[Endpoint names]\label{lem:names}
+For $0\le L\le U<\infty$, with $L\in\Sigma^0_2$ and $U\in\Pi^0_2$, there is a bounded computable rational sequence with those lower and upper limits. If the endpoints lie in $[0,1]$, it can be chosen in $[0,1]$.
+\end{lemma}
+\begin{proof}
+For $L<U$ choose a rational separator $r$ and rational bounds $a<L<U<b$. If $L=0$, use the constant lower-limit name zero instead of $u_s$ below. Interleave a computable lower-limit name $u_s$ clipped to $[a,r]$ and a computable upper-limit name $v_s$ clipped to $[r,b]$. The first has lower limit $L$ and is at most $r$; the second has upper limit $U$ and is at least $r$. Their interleaving has the desired endpoints. For equality use a convergent computable name, which exists because membership in both cut classes is $\Delta^0_2$. Clipping into $[0,1]$ preserves endpoints there. This is the elementary naming fact of~\cite[Lemma Q4.1]{UP}.
+\end{proof}
+
+\begin{theorem}[The arithmetic law at a regular scale]\label{thm:regular-pairs}
+At every asymptotically flat regular scale $F$, the positive finite dimension pairs are exactly~\eqref{eq:pairclass}. Each is realized with the same pair for original-state usable demand, pure entropy and formation.
+\end{theorem}
+\begin{proof}
+Necessity is Proposition~\ref{prop:necessity}, with $\phi(x)=\clog\max\{2,x\}$ and denominator $F(n)$.
+
+For sufficiency let $a_s$ be a computable rational endpoint name, clipped into a fixed rational compact interval $[c,C]\subset(0,\infty)$ containing $[L,U]$ in its interior. Put $G(J)=F(2J)/2$. Run a foreground tracker: at pulse $J+1$ emit one if $k(J)<a_sG(J+1)$, and otherwise zero. A background counter simulation computes the next rational one elementary instruction per pulse. Pad the new denominator $q$ by $q^2$ instructions before declaring it ready, and install a ready target only when the foreground count is within a fixed bounded distance of its current target. The program keeps emitting pulses during arbitrary background computations.
+
+We give the tracking details. For a fixed target $a$, $aG(J)$ is unbounded and $o(J)$. A perpetual run of zeros is impossible because the target is unbounded. A perpetual run of ones is impossible because its count would be linear while the target is sublinear. Changes of run therefore recur; at a change from ones to zeros the count is within a fixed error of $aG$, since adjacent increments of $G$ are at most one. Thus a ready stage is installed in finite time, and every background stage is eventually completed and installed. Stage-end ratio errors tend to zero.
+
+No extra endpoints arise inside a stage. During a zero run $k/G$ decreases, with its final ratio at least $a-O(1/G)$. During a one run write $k(J+h)=k(J)+h$. For any $\eta<1/(2C+2)$, flatness gives $G(J+h)\le G(J)+\eta h+C_\eta$. It follows that this ratio cannot cross below the smaller of its starting ratio and $a$, except by $O(C_\eta/G)$; at each emitted one it is at most $a+O(1/G)$ whenever it has reached the active target range. Equivalently, split the run before and after its first entrance into that range and apply the displayed inequality to the initial segment. During zeros it cannot cross below $a-O(1/G)$, and during ones it cannot cross above the larger of the starting ratio and $a$, up to the same vanishing error. These estimates are uniform for $a\in[c,C]$. Hence all intermediate ratios remain between the stage's initial ratio and its active target up to $o(1)$. Every stage ends, so
+\[
+ \liminf_J k(J)/G(J)=L,\qquad \limsup_J k(J)/G(J)=U.
+\]
+
+Denominator padding bounds both the active numerator and denominator polynomially in $J$, since $a_s$ stays in $[c,C]$. Computing $F$ and making the integer comparison have polynomial foreground cost in $J$. Background instructions and target installations also have polynomial pulse cost. Thus the stream has polynomial total delay. The ratio is eventually bounded below, so $k/\log J\to\infty$. Equation~\eqref{eq:profile} has error $o(F(n))$, because $k\asymp F$ and $\log^2 F=o(F)$. Since $2G(\lfloor n/2\rfloor)=F(n)+O(1)$, it transfers precisely these endpoints to all four demands.
+\end{proof}
+
+The diagonal $L=U$ proves the existing-limit assertion in Theorem~\ref{thm:main}. Endpoint selection is existential: rational compact bounds and separators need not be extracted uniformly from arbitrary names.
+
+\begin{remark}[Zero and infinite endpoints: sketch, not used]\label{rem:extended}
+The same tracking construction permits ordered extended endpoints. For a zero lower endpoint use a baseline
+\[
+ b(J)=\left\lfloor\sqrt{G(J)\lfloor\clog(J+2)\rfloor}\right\rfloor
+\]
+and track $\max\{a_sG(J),b(J)\}$. Then $b/G\to0$, $b/\log J\to\infty$ and $b=o(J)$. The target can jump at dyadic boundaries; the emitted count still has unit increments. On a preceding dyadic block there are enough pulses to fill its initial baseline, giving $k(J)\ge b(\lfloor J/4\rfloor)-O(1)$ eventually. Flatness gives $G(J/4)\gg\log J$, so this is enough for extraction. Every fixed-target stage ends because its target is unbounded and sublinear. During zeros its ratio decreases toward the active target; at an emitted one its upper ratio is $a_s+o(1)$ or $b/G+o(1)$. This sketches the zero-endpoint extension without using an unsuitable fixed $\log^2 J$ baseline.
+
+For unbounded rational targets, pad $(p_s+q_s)^2$, rather than only $q_s^2$, and require $G(J)\ge s(a_s+1)$ before ending stage $s$. Each wait is finite. Numerators and denominators are polynomially bounded in the pulse index, and stage-end ratio errors are $O(1/s)+o(1)$. For any fixed finite lower barrier, choose $\eta$ small enough for that barrier in the one-run argument above. This prevents upward transitions to arbitrarily large finite targets from introducing a smaller lower endpoint. Applying the argument to each finite barrier also handles both endpoints infinite. These observations describe possible extensions; no extended-endpoint theorem is used or claimed here beyond the positive finite classification and the separately proved stretched-scale theorem.
+\end{remark}
+
+\begin{theorem}[Stretched-scale pairs]\label{thm:stretched}
+The dimension pairs in $[0,1]^2$ of $\clog\clog A_G(n)/\clog n$ are precisely the ordered $(\Sigma^0_2,\Pi^0_2)$ pairs there, with matched usable, pure and formation realizations by value-one BCS games without finite perfection.
+\end{theorem}
+\begin{proof}
+Necessity again follows from Proposition~\ref{prop:necessity} with an eventually defined iterated logarithm. For sufficiency take an endpoint name $a_s\in[0,1]$. At $J\ge2$ put $b=\lfloor\clog J\rfloor$ and
+\[
+ \tau_s(J)=\max\{2^{\lfloor a_sb\rfloor},b^2\},
+\]
+capped by $J$ on a finite initial segment. Track this target greedily with zeros and ones. A ready stage ends when $\tau_s/2\le k\le2\tau_s$. Use the same pulse-triggered background and rational padding as above. Foreground arithmetic is polynomial in $J$.
+
+For a fixed target, $\tau_s$ is constant in each dyadic block and increases by a factor at most two at its next boundary, eventually. If $k$ is too large, holding it lets the unbounded target catch it. If it is too small, a block of $2^b$ pulses has enough positions to fill at least half a target of size at most $2^b$. The factor-two stopping window therefore recurs, including $a_s=1$. Every stage is installed and ends.
+
+At a stage end,
+\[
+ \frac{\clog k(J)}{\clog J}
+ =a_s+O\left(\frac{\log(b+2)}b\right),
+\]
+uniformly in $a_s$. During zeros this exponent decreases without crossing below the active target exponent beyond that error. During ones, $k=k_0+(J-J_0)$; for $1\le k\le J$, $\log k/\log J$ is nondecreasing along such a run. At an emitted one, $k\le\tau_s+1$, giving the upper target bound. Thus intermediate exponents stay between adjacent stage endpoints up to a vanishing error. Their lower and upper limits are the prescribed ones.
+
+The baseline is not asserted pointwise as $k\ge b^2$ immediately after a dyadic jump. What holds is $k\ge(b-1)^2$ eventually, because the preceding complete dyadic block has enough pulses to fill that baseline even while targets change. Consequently $k/\log J\to\infty$. Theorem~\ref{thm:profile} gives $\clog X=2k(1+o(1))$. Taking one more logarithm and using $J=\lfloor n/2\rfloor$ transfers the endpoints to the stated normalization.
+\end{proof}
+
+This theorem classifies pairs within the square. It makes no assertion excluding larger stretched endpoints for other games.
+
+\begin{theorem}[Quasi-polynomial windows]\label{thm:windows}
+For every rational $m>1$, a fixed value-one BCS game, without finite perfection, has
+\begin{align*}
+ (2m-2)\clog n-O_m((\log\log(n+4))^2)
+ &\le\clog d_G(n),\\
+ \clog d_G(n)&\le\clog A_G(n)
+ \le(2m+1)\clog n+O_m(1).
+\end{align*}
+The same outer bounds hold for pure entropy and formation. These are windows; no exact exponent is claimed.
+\end{theorem}
+\begin{proof}
+Write $m=A/B>0$. Choose a fixed $r_0$ with $2^r\ge\lceil m\rceil+1$ for $r\ge r_0$ and emit a finite initial zero prefix. In each epoch $[2^r,2^{r+1})$ emit
+\[
+ a_r=\lfloor m(r+1)\rfloor-\lfloor mr\rfloor
+\]
+ones at its first positions and zeros elsewhere. Completed epochs telescope, and a partial epoch contributes at most $\lceil m\rceil$. Hence $k(J)=m\clog(J+1)+O_m(1)$. This is a legal unit-increment count even for large $m$.
+
+A finite unary-counter program stores the epoch length, copies and doubles it in $O(2^r)$ instructions, and counts it down with bounded work per pulse. The residue $r\bmod B$ is finite control, and the finitely many possible $a_r$ are hard-coded. Total setup work through a partial epoch is $O_m(J)$, even when all setup occurs at its beginning, because its starting pulse index is already comparable to $2^r$. Thus $t_J\le C_m(J+1)$, with the same delay exponent for every $m$.
+
+For the lower bound we use the explicit initialized-corner charge, rather than asserting that controller degrees are uniform across programs. Fix this program. All its localization and counter errors are bounded by $P_m(H)\delta$ for some fixed polynomial $P_m$, by~\cite[Propositions P3.1, P4.2 and P5.1]{UP}. At decoded precision $\delta=C_m2^{-n/2}$ choose
+\[
+ J=\lfloor n/2-K_m\clog(n+2)\rfloor-O_m(1),\qquad H=t_J.
+\]
+The constant $K_m$ may depend on every degree in $P_m$. Since $H=O_m(J+1)$, choose it so that $2^JP_m(H)\delta\le1$, enlarging $P_m$ to include the $\sqrt H$ factors and the localized penalty norm in~\eqref{eq:column}. That estimate then gives $\|T_iQ\xi\|_2\le C_m2^{-k(J)}+P_m(H)\delta$. Proposition P3.1's input charge is explicitly
+\[
+ \wn{T_i}\le 2^{b+1/2}\|T_iQ\xi\|_2+P_m(H)\delta,
+ \qquad H<2^b\le2(H+1).
+\]
+It has a linear, not an unspecified polynomial, multiplicative cost $O(H+1)$. Moreover $J/n\to1/2$, so the logarithmic count satisfies $k(J)=m\clog n+O_m(1)$, even though $K_m$ depends on the program. All remaining additive errors are exponentially small times a fixed polynomial. The factorization error and actual source mirrors fit the same tolerance, giving
+\[
+ e_n\le C_m n^{1-m}.
+\]
+For every fixed $m>1$ this tends to zero and gives fixed marker visibility. Equation~\eqref{eq:extraction} yields the lower coefficient $2(m-1)$ and error $O_m((\log\log(n+4))^2)$. The upper proof of Theorem~\ref{thm:profile} gives $2k_n+\clog n+O_m(1)=(2m+1)\clog n+O_m(1)$. Its maximally entangled models bound all four demands. Thus the exponent window has width three; no program-uniform localization degree is assumed.
+\end{proof}
+
+\begin{theorem}[A computable speed outside every game]\label{thm:wall}
+Part~4 of Theorem~\ref{thm:main} holds, with the integer-root envelope stated there.
+\end{theorem}
+\begin{proof}
+The logarithmic-scale analogue is~\cite[Theorem Q7.2]{UP}. The argument here is a direct diagonal against dimension feasibility in the new iterated-logarithm normalization, with integer-root envelopes; it does not reproduce that theorem or use its time bound. Enumerate all finite rational games, repeating every index infinitely often. Fixed-dimension feasibility is a total decision even outside the value-one promise. Build $F$ on successive blocks $[b,b^4)$, starting at $b\ge64$, and test the next game at $m=b^3$. Write
+\[
+ \ell(n)=\lfloor n^{1/3}\rfloor,\quad u(n)=\lfloor n^{2/3}\rfloor,
+ \quad h=\left\lfloor\frac{\ell(m)+u(m)}2\right\rfloor.
+\]
+Search feasible dimensions up to the integer $2^{2^m}$. If none works, or if the least feasible $D$ is at least $2^{2^h}$, make $F$ follow the lower envelope on this block; otherwise follow the upper one. These are finite integer comparisons, requiring neither a logarithmic equality decision nor a definition of $\log\log1$.
+
+To follow the lower envelope, hold the inherited value until $\ell$ catches it, then copy $\ell$. The inherited value is at most $u(b)+1$, so catch-up occurs by $(u(b)+2)^3<b^3$. To follow the upper envelope from below, increment by one until it is caught, then copy it; an inherited one-unit excess is first held until caught. The upper envelope has unit increments, and upward catch-up takes $O(b^{2/3})$ steps. Thus before $m$ the chosen envelope is reached exactly. The construction preserves monotonicity, unit increments and $\ell\le F\le u+1$.
+
+In the high case $\clog A_G(m)\ge h$, or the dimension exceeds the search bound and gives an even stronger inequality. Since $F(m)=\ell(m)$, the normalized ratio tends to infinity along such tests. In the low case $\clog A_G(m)<h$ and $F(m)=u(m)$, so its ratio is at most $1/2+o(1)$. Regularize logs for bounded-dimensional games. Each game is tested infinitely often, excluding convergence to one. Each block choice is a finite computation, so $F$ is total computable, although no efficient time bound is asserted.
+\end{proof}
+
+Together the realizations and the obstruction distinguish a regular band with no gaps in the stated sense from the much larger class of arbitrary computable targets. Endpoint classification does not classify whole profiles.

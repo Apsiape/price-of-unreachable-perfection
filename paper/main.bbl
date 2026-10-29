@@ -1,0 +1,240 @@
+\begin{thebibliography}{10}
+
+\bibitem{BE}
+Laurent Bartholdi and Anna Erschler.
+\newblock Groups of given intermediate word growth.
+\newblock {\em Annales de l'Institut Fourier}, 64(5):2003--2036, 2014.
+\newblock \url{https://arxiv.org/abs/1110.3650}.
+
+\bibitem{BB}
+Noel Brady and Martin~R. Bridson.
+\newblock There is only one gap in the isoperimetric spectrum.
+\newblock {\em Geometric and Functional Analysis}, 10(5):1053--1070, 2000.
+\newblock \url{https://doi.org/10.1007/PL00001646}.
+
+\bibitem{Bugeaud}
+Yann Bugeaud.
+\newblock {\em Approximation by Algebraic Numbers}, volume 160 of {\em
+  Cambridge Tracts in Mathematics}.
+\newblock Cambridge University Press, 2004.
+\newblock \url{https://doi.org/10.1017/CBO9780511542886}.
+
+\bibitem{CRSV}
+Rui Chao, Ben~W. Reichardt, Chris Sutherland, and Thomas Vidick.
+\newblock Overlapping qubits.
+\newblock In {\em 8th Innovations in Theoretical Computer Science Conference},
+  volume~67 of {\em Leibniz International Proceedings in Informatics}, pages
+  48:1--48:21, 2017.
+\newblock \url{https://doi.org/10.4230/LIPIcs.ITCS.2017.48}.
+  \url{https://arxiv.org/abs/1701.01062}.
+
+\bibitem{CLS}
+Richard Cleve, Li~Liu, and William Slofstra.
+\newblock Perfect commuting-operator strategies for linear system games.
+\newblock {\em Journal of Mathematical Physics}, 58(1):012202, 2017.
+\newblock \url{https://doi.org/10.1063/1.4973422}.
+  \url{https://arxiv.org/abs/1606.02278}.
+
+\bibitem{CM}
+Richard Cleve and Rajat Mittal.
+\newblock Characterization of binary constraint system games.
+\newblock In {\em Automata, Languages, and Programming}, volume 8572 of {\em
+  Lecture Notes in Computer Science}, pages 320--331, 2014.
+\newblock \url{https://doi.org/10.1007/978-3-662-43948-7_27}.
+  \url{https://arxiv.org/abs/1209.2729}.
+
+\bibitem{Col2020}
+Andrea Coladangelo.
+\newblock A two-player dimension witness based on embezzlement, and an
+  elementary proof of the non-closure of the set of quantum correlations.
+\newblock {\em Quantum}, 4:282, 2020.
+\newblock \url{https://doi.org/10.22331/q-2020-06-18-282}.
+  \url{https://arxiv.org/abs/1904.02350}.
+
+\bibitem{ColI}
+Andrea Coladangelo.
+\newblock The {$I_{3322}$} {Bell} inequality requires infinite dimensions,
+  2026.
+\newblock \url{https://arxiv.org/abs/2609.06038}.
+
+\bibitem{Salle}
+Mikael de~la Salle.
+\newblock Spectral gap and stability for groups and non-local games.
+\newblock {\em Journal de l'\'Ecole polytechnique -- Math\'ematiques},
+  12:1417--1444, 2025.
+\newblock \url{https://doi.org/10.5802/jep.314}. Theorem numbers refer to
+  \url{https://arxiv.org/abs/2204.07084v2}.
+
+\bibitem{KFive}
+Seth Douglas.
+\newblock How much dimension does an epsilon-approximation to a non-attained
+  quantum correlation cost? a {Diophantine} answer for {$K_5$}, 2026.
+\newblock Version 1.0.2; lemma numbers refer to this version.
+  \url{https://doi.org/10.5281/zenodo.22944181}. Concept DOI:
+  \url{https://doi.org/10.5281/zenodo.21876896}.
+
+\bibitem{Irate}
+Seth Douglas.
+\newblock The {$I_{3322}$} quantum value is attained spatially but not in
+  finite dimension, 2026.
+\newblock \url{https://arxiv.org/abs/2609.05555}.
+
+\bibitem{Precision}
+Seth Douglas and Nidhal Mghirbi.
+\newblock The price of precision: usable entanglement in nonlocal games and the
+  geometry of groups, 2026.
+\newblock Version 1.0.0, unrefereed preprint.
+  \url{https://doi.org/10.5281/zenodo.23697346}.
+
+\bibitem{UP}
+Seth Douglas and Nidhal Mghirbi.
+\newblock The uncomputable price of precision, 2026.
+\newblock Version 4.0.0; theorem and section numbers refer to this version.
+  Concept DOI: \url{https://doi.org/10.5281/zenodo.23701733}.
+
+\bibitem{DPP}
+Ken Dykema, Vern~I. Paulsen, and Jitendra Prakash.
+\newblock Non-closure of the set of quantum correlations via graphs.
+\newblock {\em Communications in Mathematical Physics}, 365:1125--1142, 2019.
+\newblock \url{https://doi.org/10.1007/s00220-019-03301-1}.
+  \url{https://arxiv.org/abs/1709.05032}.
+
+\bibitem{Grigorchuk}
+Rostislav Grigorchuk.
+\newblock On the gap conjecture concerning group growth.
+\newblock {\em Bulletin of Mathematical Sciences}, 4:113--128, 2014.
+\newblock \url{https://doi.org/10.1007/s13373-012-0029-4}.
+
+\bibitem{Gromov}
+Michael Gromov.
+\newblock Groups of polynomial growth and expanding maps.
+\newblock {\em Publications Math\'ematiques de l'IH\'ES}, 53:53--78, 1981.
+\newblock With an appendix by Jacques Tits.
+  \url{https://doi.org/10.1007/BF02698687}.
+
+\bibitem{HM}
+Michael Hochman and Tom Meyerovitch.
+\newblock A characterization of the entropies of multidimensional shifts of
+  finite type.
+\newblock {\em Annals of Mathematics}, 171(3):2011--2038, 2010.
+\newblock \url{https://annals.math.princeton.edu/2010/171-3/p12}.
+
+\bibitem{JLV}
+Zhengfeng Ji, Debbie Leung, and Thomas Vidick.
+\newblock A three-player coherent state embezzlement game.
+\newblock {\em Quantum}, 4:349, 2020.
+\newblock \url{https://arxiv.org/abs/1802.04926}.
+
+\bibitem{MIPRE}
+Zhengfeng Ji, Anand Natarajan, Thomas Vidick, John Wright, and Henry Yuen.
+\newblock {MIP}$^*$ = {RE}, 2020.
+\newblock \url{https://arxiv.org/abs/2001.04383}.
+
+\bibitem{LowDegree}
+Zhengfeng Ji, Anand Natarajan, Thomas Vidick, John Wright, and Henry Yuen.
+\newblock Quantum soundness of the classical low individual degree test, 2020.
+\newblock \url{https://arxiv.org/abs/2009.12982}.
+
+\bibitem{KP}
+Martin Kassabov and Igor Pak.
+\newblock Groups of oscillating intermediate growth.
+\newblock {\em Annals of Mathematics}, 177(3):1113--1145, 2013.
+\newblock \url{https://doi.org/10.4007/annals.2013.177.3.7}.
+
+\bibitem{KRS}
+S.~A. Kruglyak, V.~I. Rabanovich, and Yu.~S. Samoilenko.
+\newblock On sums of projections.
+\newblock {\em Functional Analysis and Its Applications}, 36(3):182--195, 2002.
+\newblock \url{https://doi.org/10.1023/A:1020193804109}.
+
+\bibitem{MS}
+Amine Marrakchi and Mikael de~la Salle.
+\newblock Almost synchronous correlations and {Tomita--Takesaki} theory, 2023.
+\newblock \url{https://arxiv.org/abs/2307.08129}.
+
+\bibitem{Meyerovitch}
+Tom Meyerovitch.
+\newblock Growth-type invariants for {$\mathbb Z^d$} subshifts of finite type
+  and arithmetical classes of real numbers.
+\newblock {\em Inventiones Mathematicae}, 184(3):567--589, 2011.
+\newblock \url{https://doi.org/10.1007/s00222-010-0296-1}. Theorem 5.1 is cited
+  as stated in \url{https://arxiv.org/abs/0902.0223}.
+
+\bibitem{Game}
+Nidhal Mghirbi and Seth Douglas.
+\newblock An explicit nonlocal game of quantum value one that needs exponential
+  entanglement, 2026.
+\newblock Version 1.0.0, unrefereed preprint.
+  \url{https://doi.org/10.5281/zenodo.23697255}.
+
+\bibitem{MNY}
+Hamoon Mousavi, Seyed~Sajjad Nezhadi, and Henry Yuen.
+\newblock Nonlocal games, compression theorems, and the arithmetical hierarchy.
+\newblock In {\em Proceedings of the 54th Annual ACM SIGACT Symposium on Theory
+  of Computing}, pages 1--11, 2022.
+\newblock \url{https://doi.org/10.1145/3519935.3519949}. Preprint 2021; theorem
+  numbers refer to \url{https://arxiv.org/abs/2110.04651v2}.
+
+\bibitem{MR}
+Magdalena Musat and Mikael R{\o}rdam.
+\newblock Non-closure of quantum correlation matrices and factorizable channels
+  that require infinite dimensional ancilla.
+\newblock {\em Communications in Mathematical Physics}, 375(3):1761--1776,
+  2020.
+\newblock With an appendix by Narutaka Ozawa.
+  \url{https://arxiv.org/abs/1806.10242}.
+
+\bibitem{NZ}
+Anand Natarajan and Tina Zhang.
+\newblock Quantum free games, 2023.
+\newblock \url{https://arxiv.org/abs/2302.04322}.
+
+\bibitem{Pauwels}
+Jef Pauwels.
+\newblock The quantum supremum of the {$I_{3322}$} {Bell} inequality is not
+  attained in finite dimension, 2026.
+\newblock \url{https://arxiv.org/abs/2608.29734}.
+
+\bibitem{Roth}
+Klaus~F. Roth.
+\newblock Rational approximations to algebraic numbers.
+\newblock {\em Mathematika}, 2(1):1--20, 1955.
+\newblock \url{https://doi.org/10.1112/S0025579300000644}.
+
+\bibitem{SBR}
+Mark~V. Sapir, Jean-Camille Birget, and Eliyahu Rips.
+\newblock Isoperimetric and isodiametric functions of groups.
+\newblock {\em Annals of Mathematics}, 156(2):345--466, 2002.
+\newblock \url{https://annals.math.princeton.edu/2002/156-2/p01}.
+
+\bibitem{SlofstraProfile}
+William Slofstra.
+\newblock A group with at least subexponential hyperlinear profile, 2018.
+\newblock \url{https://arxiv.org/abs/1806.05267}.
+
+\bibitem{Slofstra}
+William Slofstra.
+\newblock The set of quantum correlations is not closed.
+\newblock {\em Forum of Mathematics, Pi}, 7:e1, 2019.
+\newblock \url{https://arxiv.org/abs/1703.08618}.
+
+\bibitem{SV}
+William Slofstra and Thomas Vidick.
+\newblock Entanglement in non-local games and the hyperlinear profile of
+  groups.
+\newblock {\em Annales Henri Poincar\'e}, 19:2979--3005, 2018.
+\newblock \url{https://arxiv.org/abs/1711.10676}.
+
+\bibitem{Vidick}
+Thomas Vidick.
+\newblock Almost synchronous quantum correlations.
+\newblock {\em Journal of Mathematical Physics}, 63(2):022201, 2022.
+\newblock \url{https://doi.org/10.1063/5.0056512}.
+  \url{https://arxiv.org/abs/2103.02468}.
+
+\bibitem{ZW}
+Xizhong Zheng and Klaus Weihrauch.
+\newblock The arithmetical hierarchy of real numbers.
+\newblock {\em Mathematical Logic Quarterly}, 47(1):51--65, 2001.
+
+\end{thebibliography}

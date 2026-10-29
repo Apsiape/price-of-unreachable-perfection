@@ -1,0 +1,80 @@
+[
+  {
+    "program": "tails/input_lamps.py",
+    "exit_code": 0,
+    "seconds": 0.395,
+    "log": "tails/recorded/input_lamps.log"
+  },
+  {
+    "program": "tails/input_tail.py",
+    "exit_code": 0,
+    "seconds": 0.63,
+    "log": "tails/recorded/input_tail.log"
+  },
+  {
+    "program": "tails/input_profiles.py",
+    "exit_code": 0,
+    "seconds": 3.615,
+    "log": "tails/recorded/input_profiles.log"
+  },
+  {
+    "program": "tails/independent.py",
+    "exit_code": 0,
+    "seconds": 19.997,
+    "log": "tails/recorded/independent.log"
+  },
+  {
+    "program": "tails/window_charge.py",
+    "exit_code": 0,
+    "seconds": 0.145,
+    "log": "tails/recorded/window_charge.log"
+  },
+  {
+    "program": "sparse/input.py",
+    "exit_code": 0,
+    "seconds": 15.208,
+    "log": "sparse/recorded/input.log"
+  },
+  {
+    "program": "sparse/independent.py",
+    "exit_code": 0,
+    "seconds": 7.333,
+    "log": "sparse/recorded/independent.log"
+  },
+  {
+    "program": "farey/input.py",
+    "exit_code": 0,
+    "seconds": 14.157,
+    "log": "farey/recorded/input.log"
+  },
+  {
+    "program": "farey/independent.py",
+    "exit_code": 0,
+    "seconds": 1.615,
+    "log": "farey/recorded/independent.log"
+  },
+  {
+    "program": "caps/input_ceiling.py",
+    "exit_code": 0,
+    "seconds": 3.794,
+    "log": "caps/recorded/input_ceiling.log"
+  },
+  {
+    "program": "caps/independent.py",
+    "exit_code": 0,
+    "seconds": 0.675,
+    "log": "caps/recorded/independent.log"
+  },
+  {
+    "program": "compression/input.py",
+    "exit_code": 0,
+    "seconds": 0.125,
+    "log": "compression/recorded/input.log"
+  },
+  {
+    "program": "compression/independent.py",
+    "exit_code": 0,
+    "seconds": 0.556,
+    "log": "compression/recorded/independent.log"
+  }
+]

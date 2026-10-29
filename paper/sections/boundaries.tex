@@ -1,0 +1,102 @@
+\section{Caps and the boundary above one}\label{sec:boundaries}
+For this section a power exponent means an endpoint of $\clog A_G(n)/n$. The results of Section~\ref{sec:scales} prescribe intermediate profiles, but do not supply a finite existing power exponent greater than one. The locality cap and unbounded-upper-exponent statements below are recalled from~\cite{UP}; the stopping cap and conditional interface that follow are deductions developed here.
+
+\subsection{A quantitative locality cap}
+Let $W$ be a finite set of words, each representing the identity in the marked Pauli source group, or its indicated six-letter restriction. The Pauli hash models of Mghirbi--Douglas~\cite[Proposition 9.4]{Game} decompose into equal-dimensional blocks permuted by the generators. Every word in this relator set fixes the same good blocks pointwise; the complementary fraction is at most $\nu$, the marker $J=-I$ is exact, and logarithmic dimension is $O_W(\nu^{-1}\log(2/\nu))$. This simultaneous version is~\cite[Lemma P6.6]{UP}. The marker is tested separately by $(J+I)/2=0$; $J$ is not required to represent the identity.
+
+\begin{definition}\label{def:local}
+Following~\cite[Definition P6.5]{UP}, fix a radius $L$ and let $W_L$ contain all source-trivial words of length at most $L$. A bounded rational presentation extending the source is quantitatively local if there are constants $K,c$ such that every equal-block model with generators permuting its blocks, exact marker $J=-I$, and common good blocks for $W_L$ admits exact-domain auxiliary assignments with logarithmic auxiliary dimension at most $c(1+\log(1/\nu))$ such that each defining residual satisfies
+\[
+ Q_j=Q_j(\Pi\otimes I)+E_j,\qquad
+ \norm{Q_j}\le K,\quad\norm{E_j}_{2,\tr}\le K\sqrt\nu,
+\]
+where $\Pi$ is its common bad-block projection, of trace at most $\nu$. All constants and $L$ are fixed before precision tends to zero.
+\end{definition}
+
+\begin{theorem}[Locality cap, recalled from~\cite{UP}]\label{thm:localcap}
+The compiled game of every quantitatively local extension has quantum value one and satisfies
+\[
+ \log D_G(\eps)\le C_G\eps^{-1}\log(2/\eps).
+\]
+The same upper bound holds for usable, pure and formation demands. All four upper power exponents are at most one.
+\end{theorem}
+This is~\cite[Theorem P6.7]{UP}, using its Lemma P6.6; its proof is not repeated here. The displayed stopped calibrators, finite mixing and chaining, and fixed residual powers belong to this class by its Lemma P6.8. Fixed-radius invariance tests are covered by Lemma P6.9 there, using neighborhoods of actual relator failures and finitely many source-trivial conjugates, rather than an arbitrarily padded bad set. Thus the relator hypothesis above is essential. The carry-checker presentation of~\cite[Section Q1]{UP} is a separate construction.
+
+For integer stopped multipliers $m\ge r\ge2$,~\cite[Corollary P6.10]{UP} gives the saturated exponent one, including the dimension and matched usable laws. In particular $m>r$ does not realize the nominal exponent $\log m/\log r>1$. These cited conclusions concern the quantitative extension class, rather than all finite extensions containing source letters.
+
+\subsection{General games have unbounded upper exponents}
+\begin{theorem}[Recalled from~\cite{UP}]\label{thm:unbounded}
+For each total computable function $B\colon\N^2\to\N$, there is a finite rational value-one game $G$ such that, for every $C$, $D_G(2^{-n})>B(C,n)$ for infinitely many $n$. Some such game has upper power exponent $+\infty$, as do its pure-entropy and formation demands. These existence statements also hold within rational BCS games.
+\end{theorem}
+This is~\cite[Theorem P6.11]{UP}. Its BCS conclusion uses the repaired Lemma P6.12 there: a synchronous game must have positive probability on every diagonal question pair for the stated value-one equivalence. The hard synchronous instances have the uniform question distribution, as in~\cite[Theorem 1.6 and the proof of Lemma 6.7]{MNY}, so they satisfy this hypothesis. We use that precise reduction, including its sequential-POVM reverse transfer, without reproducing it. The quantifier order is one game for each two-argument bound $B$, escaping every fixed parameter $C$ infinitely often. Each fixed value-one game's dimension profile remains computable. No infinite-upper usable demand or finite existing exponent above one is inferred.
+
+\subsection{Cheap stopping and honest-linear compression}
+\begin{lemma}[A cheap deterministic answer-reduction strategy]\label{lem:cheap}
+In the literal answer-reduced game of~\cite[Table 5]{MNY}, with formula length $L$ and underlying question count $m$, there is a one-dimensional synchronous oracularizable strategy of loss at most $6L^{-3}$.
+\end{lemma}
+\begin{proof}
+Choose the same fixed legal padded answer $a_0(x)$ for either player on each underlying question $x$. For each oracle pair $(x,y)$ choose an arbitrary proof string whose two input portions are $a_0(x),a_0(y)$. Answer every bit or triple query by reading these strings. All equal-question, proof-consistency and isolated-input consistency tests pass, in both orientations. Only clause tests may fail. We allow every clause triple to reject; no accepting-tableau property is assumed.
+
+The question alphabet has size $M=|X^{\rm orac}|(L+L^2+L^3)$ with $|X^{\rm orac}|\ge m^2$. A clause test compares an oracle single index against a matching triple containing it. There are at most $2m^2\cdot3L^3$ losing ordered pairs, including both orientations. Uniform sampling on all ordered question pairs gives loss at most $6m^2L^3/M^2\le6L^{-3}$. Repeated indices reduce this count; malformed padded questions are trivial. The strategy reads one fixed string in either role and is oracularizable.
+\end{proof}
+
+\paragraph{The ladder interface.}
+Precisely, an honest-linear stopping ladder consists of finite games $G_i$, sizes $L_i\ge1$, and loss weights $0\le\lambda_i\le\lambda<1$. Fix an admissible strategy class preserved by the following maps. For every finite admissible strategy $T$ of $G_{i+1}$ there is a strategy $\mathcal C_i[T]$ of $G_i$ with
+\[
+ \operatorname{loss}(\mathcal C_i[T])\le\lambda_i\operatorname{loss}(T),\qquad
+ \log\dim\mathcal C_i[T]\le HL_i+\log\dim T.
+\]
+At each level there is an admissible one-dimensional stopping strategy of loss at most $cL_i^{-a}$, with fixed $a,c,H>0$. A fixed top wrapper may add logarithmic dimension $C_0$ and no loss. These bounds use the same size $L_i$ and have no additive loss. Set $S_1=1$ and $S_i=\prod_{j<i}\lambda_j$.
+
+\begin{theorem}[Honest-linear stopping cap]\label{thm:compression-cap}
+The top game of an honest-linear stopping ladder satisfies
+\[
+ \log D_G(\eps)\le C_0+
+ \frac{H(c/\eps)^{1/a}}{1-\lambda^{1/a}}.
+\]
+In particular, literal MNY answer-reduction ladders satisfying this interface, with honest-linear direct parts measured in whole-level formula length, have $\log D_G(\eps)\le C_G\eps^{-1/3}$.
+\end{theorem}
+\begin{proof}
+Stop at the first level $K$ with $S_KcL_K^{-a}\le\eps$, and compose the maps from that one-dimensional terminal strategy. This gives loss at most $\eps$ and cost at most $C_0+H\sum_{i<K}L_i$. Such a level exists because $L_i\ge1$ and $S_i\le\lambda^{i-1}$. For $i<K$,
+\[
+ L_i<(c/\eps)^{1/a}S_i^{1/a}
+ \le(c/\eps)^{1/a}\lambda^{(i-1)/a}.
+\]
+Sum the geometric series. If a weight is zero, stop immediately after it; its terminal loss is annihilated. No monotonicity of the sizes is required.
+
+For the indicated MNY specialization, Lemma~\ref{lem:cheap} supplies $a=3,c=6$ and an oracularizable terminal strategy. Introspection adds logarithmic dimension linear in the question length of the introspected game, which is bounded by whole-level formula length; answer reduction adds no dimension~\cite[Propositions 4.2 and 5.3]{MNY}. Their completeness maps retain oracularizability. The recursive tagged mixture contributes a factor at most $1/2$ as in~\cite[Theorem 6.1(2)]{MNY}. Tensoring the direct and recursive strategies supplies compatible tagged measurements when the direct parts have the stipulated exact honest strategies and linear cost. Under precisely those hypotheses the displayed interface applies. No assertion that every MNY recursion has honest-linear direct parts is needed.
+\end{proof}
+
+Both caps have a size-detection interpretation within their proved interfaces: a defect invisible outside a fraction $\nu$ of blocks costs loss $O(\nu)$, and a rejecting event sampled with probability $L^{-a}$ permits stopping at size $O(\eps^{-1/a})$. A uniform clause tester with only $O(1)$ violated clauses out of $\Theta(L)$ would give $a=1$ under the same honest-linear and completeness assumptions. This interpretation is not a theorem constraining every nonlocal game or every compression construction. The $1/3$ cap is an upper bound, with no matching sharpness assertion.
+
+\subsection{A conditional route above one}\label{sec:conditional}
+We state a sufficient hypothesis with all interfaces included. Let \emph{linear closed compression} mean an effective compressor for polynomial-time verifiers describing finite rational synchronous games, including efficiently represented joint question distributions. Its class must contain the correlated Pauli tests of~\cite{Salle}, the rational tagged mixtures below, and its own outputs, and must support the effective recursion construction. For each fixed verifier assume constants $C,\gamma$ and a starting index such that its compressed game at index $n$ has time and question length $O((\log n)^\gamma)$; every finite full-matrix oracularizable tracial PVM strategy lifts with loss at most $C$ times the old loss and logarithmic dimension increased by $O((\log n)^\gamma)$, remaining in the same strategy class; every sufficiently low-loss finite tracial PVM strategy extracts, with loss multiplied by at most $C$, to a nonzero corner of its original algebra with normalized restricted trace. Constants and loss ranges are uniform in $n$. This is a hypothesis, not a consequence of existing gapless compression. In particular, independent uniform question sampling does not automatically implement a correlated direct test with uniform quantitative soundness.
+
+Write $D_G^s(\eps)$ for the least representation dimension of a finite tracial PVM strategy with loss at most $\eps$; a finite direct sum is counted by the sum of its matrix sizes. This is the synchronous dimension demand.
+
+\begin{theorem}[Conditional positive power spectrum]\label{thm:conditional}
+Under linear closed compression, every positive $\Delta^0_2$ real $\beta$ is an existing power exponent for synchronous dimension demand. For general strategies a fixed synchronization test and known fourth-root corner rounding give lower exponent at least $\beta/4$ and upper exponent at most $\beta$. With dimension-compatible linear rounding, the general exponent is exactly $\beta$.
+\end{theorem}
+\begin{proof}
+Fix a convergent computable rational name for $\beta>0$ and an integer $B>2\beta+2$. At levels $n_k=2^{Bk^2}$ simulate a finite sequential prefix of that name within a bounded polynomial-in-$n_k$ time budget. Clip the last completed output into $[1/(k+1),B/2]$ and call it $t_k$. Every fixed prefix eventually completes, so $t_k\to\beta$ without a modulus of convergence. Set $N_k=2^{\lfloor t_kk^2\rfloor}$, with a harmless finite initial prefix change. Then $\clog N_k=\beta k^2+o(k^2)$, and the direct Pauli verifier has polynomial time in $n_k$. The next compressed level has time polynomial in $k$; its index has $O(k^2)$ bits. Define trivial games off schedule and use the effective recursion theorem within the hypothesized closed format.
+
+At level $k$ play the direct Pauli test on $N_k$ qubits with probability $1/2$, the compressed successor with probability $s_k=2^{-(2k+1)}$, and a trivial branch otherwise. The cumulative recursive weight is $W_k=2^{-k^2}$. Rational joint mixtures are explicitly part of the hypothesis. Honest play through level $k$ followed by an arbitrary admissible terminal strategy has loss at most $C^k2^{-(k+1)^2}$ and logarithmic dimension at most a constant times
+\[
+ \sum_{j\le k}(N_j+\operatorname{poly}(j)).
+\]
+For each $\eta>0$, all late terms lie between $2^{(\beta-\eta)j^2}$ and $2^{(\beta+\eta)j^2+O(1)}$. The final term lower-bounds the sum; at most $k+1$ terms plus a finite prefix upper-bound it. Hence the logarithm of this sum is $\beta k^2+o(k^2)$, even for oscillating approximations. No comparison of the sum with $(k+1)N_k$ is used. The adjacent logarithmic precision depths $x_k=\clog(1/\eps_k)=(k+1)^2-k\clog C$, where $\eps_k=C^k2^{-(k+1)^2}$, satisfy $x_{k+1}/x_k\to1$. Monotonicity therefore interpolates the upper exponent to every sufficiently small loss and proves value one.
+
+At loss $2^{-x}$, successive restrictions and soundness extractions give level-$j$ loss at most $2^{-x}C^j2^{j^2}$. When $x\ge j^2+j\clog C+O(1)$, the direct Pauli rigidity theorem~\cite[Theorem 3.11]{Salle} gives flexible closeness parameter at most $1/2$ to its $2^{N_j}$-dimensional ideal algebra. We spell out the dimension point because flexible closeness permits amplification. If a finite algebra $\bigoplus_iM_{d_i}$ is a corner $P$ in the amplified ideal algebra, the partial isometry of closeness gives $\tau_\infty(P)\ge1-\delta$. On a nonzero finite type-I central component with auxiliary size $r_i$ and central weight $p_i$, a rank-$d_i$ projection has semifinite trace $p_id_i/(2^{N_j}r_i)\le d_i/2^{N_j}$. A type-II component has no nonzero finite-dimensional full corner. Summing gives
+\[
+ \sum_i d_i\ge(1-\delta)2^{N_j}.
+\]
+Every intervening corner extraction is dimension-nonincreasing by hypothesis. Thus the original faithful representation dimension has logarithm at least $N_j-1$. Adjacent extraction thresholds again have ratio tending to one; this yields the synchronous lower exponent $\beta$.
+
+Add fixed diagonal synchronization mass covering every question marginal if needed. Vidick's finite-dimensional almost-synchronous rounding~\cite{Vidick}, in the corner formulation of~\cite[Corollaries 3.2 and 3.4]{MS} gives, after a fixed-game Naimark dilation for POVMs,
+\[
+ D_G^s(K_G\eps^{1/4})\le c_GD_G(\eps).
+\]
+It implies a general lower exponent $\beta/4$; the synchronous honest strategies give upper exponent $\beta$. A dimension-compatible linear version gives equality. The dimension arithmetic necessity of Proposition~\ref{prop:necessity} then supplies the converse for existing positive dimension exponents under that additional hypothesis. No original-state entanglement theorem is inferred from this corner rounding.
+\end{proof}
+
+The Pauli rigidity and rounding inputs do not establish the missing compression interface. Quantum-sound low-degree testing already exists~\cite{LowDegree}, and other compression frameworks include granular and hypercompression for free games~\cite{NZ}. The open hypothesis here is the uniform linear, additive-free, dimension-compatible, iterably closed interface just stated. It should not be identified with a quantum PCP conjecture without a reduction.

@@ -1,0 +1,116 @@
+\section{A theory of precision scales}\label{sec:intro}
+A finite nonlocal game can have quantum value one while every finite-dimensional strategy loses with positive probability. The absence of a perfect strategy then has a quantitative price. How large must a system be to lose at most $\eps$? Which growth functions can occur when the game is fixed once and for all? We study this whole-profile question together with an operational version: how many entangled bits can be distilled, with classical communication from Alice to Bob, from the very mixed state used by a near-perfect strategy?
+
+For a finite rational game $G$ of quantum value one let $D_G(\eps)$ be the least $d$ for which a strategy on $\C^d\otimes\C^d$, with arbitrary state and POVMs, has loss at most $\eps$. Local spaces of smaller sizes may be padded. Write
+\begin{equation}\label{eq:resources}
+ A_G(n)=\clog D_G(2^{-n}),\qquad
+ \usable(\eps)=\inf_{\text{loss}\le\eps}\ED(\rho_{AB}).
+\end{equation}
+The infimum in the second expression ranges over all finite-dimensional strategies, with no dimension restriction and no access to a purifying environment. Entanglement is measured in bits per copy. We also write $p_G$ for the infimum of pure-state entanglement entropy over pure original strategies and $f_G$ for the infimum of single-copy entanglement of formation over all original strategies. Our lower estimates apply before taking these infima. The maximally entangled upper strategies simultaneously bound all four demands. We abbreviate $\usable(2^{-n})$ by $d_G(n)$.
+
+All logarithms are base two unless $\ln$ is written. When an iterated logarithm is used for an arbitrary game, we regularize it at a fixed positive value, for example by replacing $\clog A_G$ with $\clog\max\{2,A_G\}$. This changes none of the positive endpoints below. If a game of value one has no finite perfect strategy, compactness at each fixed dimension implies $D_G(2^{-n})\to\infty$, so the unregularized logarithms are eventually defined.
+
+\begin{definition}\label{def:regular}
+A regular scale is a function $F\colon\N\to\N$, computable in deterministic space $O(\log(n+2))$, such that $F$ is nondecreasing, its adjacent increments belong to $\{0,1\}$, and $F(n)/\log(n+2)\to\infty$. It is asymptotically flat if $F(n+1)-F(n)$ has average slope tending uniformly to zero on long intervals: for every $\eta>0$ there is $C_\eta$ with
+\[
+ F(v)-F(u)\le\eta(v-u)+C_\eta\quad(v\ge u\ge0).
+\]
+\end{definition}
+This explicit interval condition is the meaning of flatness throughout the paper. It implies $F(n)=o(n)$. Smooth sublinear targets, with a finite initial prefix change and integer rounding, provide examples.
+
+We use the real-number hierarchy convention that a finite lower limit of a computable rational sequence is a $\Sigma^0_2$ real, a finite upper limit is a $\Pi^0_2$ real, and a limit is a $\Delta^0_2$ real; see Zheng and Weihrauch~\cite{ZW}. The hierarchy here classifies cuts of real numbers.
+
+\begin{theorem}[Theory of scales]\label{thm:main}
+The following statements hold for fixed finite rational games.
+\begin{enumerate}
+\item For every regular scale $F$, a rational Boolean constraint-system game $G$ of quantum value one, with no finite-dimensional perfect strategy, satisfies
+\[
+ \clog A_G(n)=F(n)+O\bigl(\log(n+2)+\log^2(F(n)+2)\bigr),
+\]
+and the same estimate holds for $\clog d_G(n)$, $\clog p_G(2^{-n})$ and $\clog f_G(2^{-n})$.
+\item At every asymptotically flat regular scale $F$, the positive finite dimension endpoint pairs of $\clog A_G(n)/F(n)$ are exactly
+\begin{equation}\label{eq:pairclass}
+ \{(L,U):0<L\le U<\infty,\ L\in\Sigma^0_2,\ U\in\Pi^0_2\}.
+\end{equation}
+Every pair is realized by a BCS game with the same operational endpoint pair for $\clog d_G(n)/F(n)$. In particular the positive existing dimension limits are exactly the positive $\Delta^0_2$ reals.
+\item The endpoint pairs in $[0,1]^2$ of
+\[
+ \frac{\clog\clog A_G(n)}{\clog n}
+\]
+are exactly the ordered $(\Sigma^0_2,\Pi^0_2)$ pairs in that square. They have matched original-state usable realizations.
+\item There is a computable nondecreasing unit-increment $F$ with
+\[
+ \lfloor n^{1/3}\rfloor\le F(n)\le\lfloor n^{2/3}\rfloor+1
+\]
+for all sufficiently large $n$, for which no finite rational game satisfies $\clog A_G(n)=F(n)(1+o(1))$.
+\end{enumerate}
+\end{theorem}
+
+The arithmetic necessity in this theorem is about dimension. The matched usable laws are realization statements for the constructed games. Our proof does not compute distillable entanglement of arbitrary mixed states. The main input beyond the compiler, controller and extraction theorems of~\cite{UP,Precision} is a single source model with a tail estimate at every spectral threshold. It yields the pointwise profile
+\[
+ \clog A_G(n),\ \clog d_G(n)
+ =2k(\lfloor n/2\rfloor)
+ +O\bigl(\log(n+2)+\log^2(k(\lfloor n/2\rfloor)+2)\bigr),
+\]
+where $k$ is the cumulative one-count of a programmed pulse word. No positive pulse-density assumption is needed. Sections~\ref{sec:source}--\ref{sec:scales} prove the theorem and the quasi-polynomial windows.
+
+Table~\ref{tab:scales} separates dimension from its logarithm. Put $n=\log_2(1/\eps)$. The first row is a Bell-functional deficit problem, and the exact-marginal example in Section~\ref{sec:farey} has a third contract. Neither is silently converted to a Boolean value-one game.
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{.24\linewidth}>{\raggedright\arraybackslash}p{.31\linewidth}>{\raggedright\arraybackslash}p{.37\linewidth}@{}}
+\toprule
+Dimension scale & What is established & Boundary of the statement\\
+\midrule
+$D=\Theta(n)$ & $I_{3322}$ Bell deficit~\cite{Irate} & Non-attainment also proved by Pauwels and Coladangelo~\cite{Pauwels,ColI}; distinct contract\\
+$D=2^{\alpha n+o(n)}$ & Positive coefficients and endpoint pairs classified in~\cite[Theorem Q4.2]{UP} & Matched usable realizations\\
+$D=2^{n^{c+o(1)}}$ & Quasi-polynomial windows of bounded width & Exact exponents in these windows unresolved\\
+$D=2^{2^{F(n)(1+o(1))}}$ & Every regular $F$; arithmetic law for flat $F$ & Computability alone is insufficient\\
+$D=2^{2^{n^{c+o(1)}}}$ & Ordered stretched pairs in $[0,1]^2$ & Statement is restricted to this square\\
+$D=2^{2^{\beta n+o(n)}}$ & $0<\beta\le1$ classified in~\cite[Theorems P1.1, Q6.1]{UP} & A finite existing $\beta>1$ is unresolved\\
+General upper power exponent & $+\infty$ occurs in~\cite[Theorem P6.11]{UP} & No usable-entanglement conclusion from this argument\\
+\bottomrule
+\end{tabular}
+\caption{Dimension prices, with precision $\eps=2^{-n}$. Classification refers to dimension; operational matching refers to the realized games. Rows 1, 2, 6 and 7 cite earlier results; rows 3--5 are proved here.}\label{tab:scales}
+\end{table}
+
+\subsection{Relation to earlier work}
+Slofstra established nonclosure through finite nonlocal games~\cite{Slofstra}. Slofstra and Vidick gave quantitative dimension and Schmidt-rank bounds~\cite{SV}; their polynomial lower bound is a dimension bound, not a lower bound on distillable ebits. Slofstra's later two-player construction has a bound $\exp(c\eps^{-a})$ for some $0<a<1$ and commuting-operator value one; quantum value one was left open~\cite[Corollary 1.4]{SlofstraProfile}. Ji, Leung and Vidick obtained a three-player coherent-state embezzlement game~\cite{JLV}. Coladangelo then obtained a two-player near-optimal dimension bound $2^{\Omega(\eps^{-1/8})}$~\cite{Col2020}. Binary constraint-system and linear-system games have the operator formulations of Cleve--Mittal and Cleve--Liu--Slofstra~\cite{CM,CLS}. The undecidability and recursive-compression background includes $\mathrm{MIP}^*=\mathrm{RE}$~\cite{MIPRE}. Mousavi, Nezhadi and Yuen classified the value-one decision problem at the second universal level of the arithmetical hierarchy~\cite{MNY}. We use their hardness for the upper-exponent obstruction and their compression construction for the cap in Section~\ref{sec:boundaries}; the regular-scale realizations are direct programmed constructions.
+
+The two base-scale classifications are results of the companion paper \emph{The uncomputable price of precision}, version 4.0.0: Theorem~16.6 and Corollary~16.7 give matching polynomial dimension laws and their positive coefficients; Theorem~Q4.2 gives their endpoint pairs; Theorems~P1.1 and Q6.1 give the power scale and its pairs in $(0,1]$~\cite{UP}. All theorem and section numbers citing that paper refer to version 4.0.0, identified by its concept DOI in the bibliography. The locality and unbounded-upper-exponent results below are also restatements of that paper, with their quantitative hypotheses; we do not reproduce their proofs. The new contributions here are the uniform-tail source, its density-free profile and regular-scale consequences, the stretched and window estimates, the diagonal in the iterated-logarithm normalization, the stopping cap and conditional interface, and the Farey comparison and endpoint curve.
+
+Bartholdi--Erschler realize intermediate word-growth functions under their dilation conditions~\cite{BE}; Kassabov--Pak construct oscillating intermediate growth between widely separated prescribed bounds~\cite{KP}. These are close precedents for prescribed speeds and oscillations, with different invariants and equivalence relations. Hochman--Meyerovitch classify entropies of multidimensional shifts of finite type~\cite{HM}. As stated, Meyerovitch's Theorem~5.1 classifies lower, upper and existing entropy dimensions of $\mathbb Z^d$ shifts of finite type, for $d\ge2$, as the $\Sigma_2$, $\Pi_3$ and $\Delta_2$ reals in $[0,d]$, respectively~\cite{Meyerovitch}. The upper class there is $\Pi_3$, whereas finite-dimensional feasibility here is decidable and gives a $\Pi^0_2$ upper cut; global pattern extension in that setting is a different computational problem. Here we also classify the joint ordered endpoint pair. This comparison uses his three stated classes without identifying the invariants. Sapir--Birget--Rips show how computational restrictions enter realization of isoperimetric functions~\cite{SBR}. Brady--Bridson prove density, with closure $\{1\}\cup[2,\infty)$, for isoperimetric exponents~\cite{BB}; a closure theorem is different from realizing every real exponent. Gromov's polynomial-growth theorem and Grigorchuk's gap conjecture~\cite{Gromov,Grigorchuk} give further contrasts. No group-growth theorem is transferred to the present game invariant.
+
+\section{Effective dimension and the imported interfaces}\label{sec:interfaces}
+
+\begin{proposition}[Arithmetic necessity at every effective scale]\label{prop:necessity}
+For rational finite games $G$ of quantum value one, there is one uniform partial algorithm taking $G$ and a positive rational tolerance as input and returning its least feasible local dimension whenever its search terminates. It terminates on every value-one game. If $\phi$ is an effectively evaluable real function defined at the relevant $A_G(n)$ and $s(n)$ is an effectively evaluable, eventually positive sequence tending to infinity, every finite lower endpoint of $\phi(A_G(n))/s(n)$ belongs to $\Sigma^0_2$ and every finite upper endpoint belongs to $\Pi^0_2$. An existing finite limit belongs to $\Delta^0_2$.
+\end{proposition}
+\begin{proof}
+At fixed $d$, write a state and each POVM using real and imaginary matrix entries. Hermiticity, positivity, normalization and loss at most a positive rational threshold form a first-order sentence over the real field with rational polynomial coefficients. Positivity may be expressed by principal minors, or by a factorization $BB^*$. Real quantifier elimination decides this sentence, including equality at the threshold. Test $d=1,2,\ldots$. The value-one promise makes the search finite for every positive tolerance. It supplies neither a recognizer for the promise nor a total bound on all input descriptions.
+
+Effective evaluation gives computable rationals within $1/n$ of the normalized profile. Their lower and upper limits are unchanged. For a computable rational sequence, its finite lower limit is left computably enumerable relative to the halting set, and its finite upper limit is right computably enumerable relative to that set. One can see this by taking tail infima and suprema, uniformly computable as extended reals relative to the halting set, then increasing or decreasing the tail index. These are the asserted cut classes. A finite limit is a limit of a computable rational sequence. Monotonicity of $\phi$ is unnecessary; effective evaluation, its domain, and positive denominators are necessary.
+\end{proof}
+
+We now state precisely the interfaces used from~\cite{UP,Precision}. This records dependencies rather than new assumptions about arbitrary games. A weighted model has $\xi=\sqrt\rho$ and norm $\wn R=\norm{R\xi}_2$. Domains (unitaries, projections and bounded self-adjoint contractions) are exact; each tested polynomial residual and each required square-root-state commutator has weighted norm at most its precision.
+
+\paragraph{Compiler.}
+The polynomial compiler~\cite[Theorem 3.1]{UP} sends a finite bounded rational $*$-polynomial presentation to a fixed finite rational BCS game. The game-to-model transfer of~\cite[Theorem 4.9 and Proposition 6.1]{Precision}, together with that compiler, decodes loss $\eps$ on the original state at precision $C\sqrt\eps$, including actual mirrors, inverse mirrors and square-root-state commutators. A flat precision-$\delta$ model of dimension $D$ gives a maximally entangled strategy in dimension at most $cD$ and loss at most $C\delta^2$. The constants depend on the fixed presentation.
+
+\paragraph{Clock and controller.}
+The unguarded two-clock controller and normalized stopped-product construction of~\cite[Sections P3--P5]{UP} simulate a fixed deterministic INC/DECJZ/NOP program with two output controls. If $t_J$ is the physical time immediately after pulse $J$ and $k(J)$ counts its one pulses, then $k(0)=0$ and $k(J+1)-k(J)\in\{0,1\}$. At horizon $H$ the localized errors are $C(H+1)^b\delta$. Initialized-corner amplitude is charged by a polynomial in $H$. Exact scalar upper histories allow cyclic reset before a programmed stop. No tensor factor proportional to $t_J$ is required.
+
+For clarity the complete-column estimate used below is
+\begin{equation}\label{eq:column}
+ \norm{T\varphi}\le 2^{-k(J)}+
+ 2^{J-k(J)+1}\bigl(\norm{S\varphi}+\sqrt H\,r_H\bigr)
+ +C\sqrt{H+1}\,r_H,\qquad H=t_J,
+\end{equation}
+where $r_H=C(H+1)^b\delta$, $S=0$ is tested, and charge back to $\wn T$ costs another polynomial in $H$. The proof uses ordered measurement columns: $(PK)^*(PK)+((I-P)K)^*((I-P)K)=K^*K$ exactly. Normalizing the two counters divides by their actual products $2^{k}$ and $2^J$. The largest stopped ratio is $2^{J-k(J)+1}$ because $J-k(J)$ is nondecreasing. This explains why no positive density enters~\eqref{eq:column}. This is inequality (P5.3) in the proof of~\cite[Proposition P5.1]{UP}: Proposition P3.1 supplies localization, Proposition P4.2 supplies counter stability, the normalized identities (P5.2) give products $M_h=2^{k(h)}$, $N_h=2^{j(h)}$, and Lemma P3.2 sums the stopped columns. That derivation uses polynomial delay but not pulse density. Lemma Q2.2 there is the analogous estimate for the separate carry checker.
+
+\paragraph{Original-state extraction.}
+The proof of~\cite[Theorem 12.4]{Precision}, via its signed regular extraction Theorem 6.4 and displayed budget (12.4), gives the following source-level estimate, also recorded in~\cite[Section P1]{UP}:
+\begin{equation}\label{eq:extraction}
+ \clog\ED(\rho_{AB})\ge 2\clog(1/e)
+ -C\bigl(\clog\clog(1/e)+C\bigr)^2-C.
+\end{equation}
+Here the common tolerance $e$ includes all source residuals, mirrors, inverse mirrors and square-root-state commutators, and the marked central sector has fixed visibility. Its explicit budget is $2^q\Lambda_q^4e^2\le c$ with $\Lambda_q\le2^{(\clog q+23)^2}$, giving rate at least $c'2^q$. The Alice filter probability is included in that rate. Thus~\eqref{eq:extraction} is a statement about the original mixed state. These are the exact quantitative inputs needed below; replacing extraction by an entropy bound would not suffice.

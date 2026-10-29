@@ -1,0 +1,111 @@
+\section{The density-free profile law}\label{sec:profiles}
+Fix a pulse program $\pi$ with unbounded one-count $k$ and polynomial delay $t_J\le C(J+1)^p$. Let
+\[
+ h(\ell)=\min\{J:k(J)=\ell\},\quad h(0)=0,\qquad
+ s(t)=2^{-h(\lfloor\clog(1/t)\rfloor)-1}\quad(0<t\le1),
+ \quad s(0)=0.
+\]
+The first hit, including the beginning of a zero plateau, is essential. The function $s$ is nondecreasing and at most $1/2$.
+
+For each of the 28 normalized source and marker residuals take its own two-clock controller and stopped calibrator from Section~\ref{sec:interfaces}. Replace the original test $R_i=0$ by $R_i=V_iT_i$ and the penalty test $S_i=0$. The domains make $V_i$ unitary and $T_i$ a positive contraction. Use the same finite program table in every copy. Different residual workspaces have no imposed commutations with one another's moduli or with the source letters; the polar factors are excluded from the instantaneous commuting lists. This is exactly the source-calibration presentation of~\cite[Section P5]{UP} for the chosen program, compiled by its Theorem~3.1. Denote the fixed rational BCS game by $G_\pi$.
+
+\begin{theorem}[Pointwise profile]\label{thm:profile}
+There are constants $C,C_*,n_0$ depending on the fixed program such that for $n\ge n_0$, with $k_n=k(\lfloor n/2\rfloor)$,
+\begin{align}
+ \clog A_{G_\pi}(n)&\le2k_n+\clog n+C,\label{eq:upper-profile}\\
+ \clog\ED(\rho_{AB})&\ge2k_n-C\log(n+2)
+       -C\log^2(k_n+2)-C,\label{eq:lower-profile}
+\end{align}
+where the second estimate holds for every original mixed state of every loss-$2^{-n}$ strategy whenever $k_n\ge C_*\log(n+2)$. The upper estimate is attained as an upper bound by maximally entangled strategies. If $k(J)/\log(J+2)\to\infty$, then, for $X=A_{G_\pi},d_{G_\pi},p_{G_\pi},f_{G_\pi}$ at dyadic precision,
+\begin{equation}\label{eq:profile}
+ \clog X(n)=2k_n+O\bigl(\log(n+2)+\log^2(k_n+2)\bigr).
+\end{equation}
+The game has value one and no finite-dimensional perfect strategy.
+\end{theorem}
+\begin{proof}
+Let $C_c\ge1$ be the completeness loss constant and choose flat precision $\eta$ by $C_c\eta^2=2^{-n}$. Put
+\[
+ x=\frac{n+\clog C_c+1}{2},\qquad
+ \ell=k(\lceil x\rceil-1)+1,\qquad \kappa=2^{-\ell},
+\]
+and
+\[
+ N=\left\lceil16\bigl(n\ln2+\ln(4C_c)+1\bigr)4^\ell\right\rceil.
+\]
+The first-hit identity $h(\ell)\ge x$ is equivalent to $k(\lceil x\rceil-1)<\ell$. Hence $s(\kappa)^2\le\eta^2/8$. The choice of $N$ gives
+\[
+ \sqrt2s(1)^2e^{-N\kappa^2/16}<\eta^2/8.
+\]
+Also $\kappa\ge C_h/\sqrt N$ eventually. Lemma~\ref{lem:tail}, applied with $f=s$, makes every $S_i=s(|R_i|)$ have flat norm at most $\eta/2$.
+
+For each residual choose its unitary polar extension $R_i=V_i|R_i|$ and set $T_i=|R_i|$. On a spectral value $t>0$, run the exact scalar controller, stop at the first physical age at which the one-count is $\lfloor\clog(1/t)\rfloor$, and initialize $S=s(t)$. Until stopping, the two calibrator coordinates are $2^{k(j)}t$ and $2^js(t)$; at the stop the second equals $1/2$. Afterwards they freeze. At $t=0$ set both to zero and do not stop. A cyclic reset reinitializes the coordinates and counters even when this first stop lies beyond the reset period. These are the exact upper histories of the imported construction.
+
+The reciprocal-age coordinates $1/(a+1)$, counter coordinates $n_i(a)/(a+1)$, witnesses $\max\{n_i(a)-1,0\}/(a+1)$ and exact zero tests remain in their domains because each instruction changes at most one counter by one. All non-clock equations other than $S_i=0$ are exact. Spectral histories are assigned separately for each $T_i$, so simultaneous assignments require no commutation of different source residuals. Use $n+O(1)$ bits on each of the 56 clock factors. Their unguarded increment norm is $\sqrt2\,2^{-N_c/2}$ and their Cantor defects are $O(4^{-N_c})$; all are at most $\eta/2$ after increasing the fixed offset. No register of size $t_{h(\ell)}$ is added. The total logarithmic dimension is
+\[
+ 3N+O(\sqrt N)+56(n+O(1)).
+\]
+Completeness now gives loss at most $2^{-n}$. Taking a logarithm once more gives $2\ell+\clog n+O(1)$. The unit-increment property absorbs the fixed shift between $\lceil x\rceil-1$ and $\lfloor n/2\rfloor$, proving~\eqref{eq:upper-profile}.
+
+For the lower estimate start with any original strategy and decode at the common precision $\delta=C\,2^{-n/2}$. Set
+\[
+ J=\lfloor n/2-K\log(n+2)\rfloor-O(1),\qquad H=t_J.
+\]
+Choose $K$ larger than every fixed localization and controller degree. Polynomial delay ensures $2^J(H+2)^{a_1}\delta\le1$. In~\eqref{eq:column}, the tested $S=0$ bounds $\norm{S\varphi}$ by $\delta$ times a polynomial in $H$. The potentially large term is
+\[
+ 2^{J-k(J)}\delta\,\operatorname{poly}(H)
+ =2^{-k(J)}\bigl[2^J\delta\,\operatorname{poly}(H)\bigr].
+\]
+The bracket is bounded by the choice of $J$. Charge the initialized corner back to the state. Since $k(J)\le J$, all additive errors are absorbed, yielding
+\[
+ \wn{T_i}\le C(n+2)^b2^{-k(J)}.
+\]
+The decoded factorization is approximate: $\wn{R_i-V_iT_i}\le\delta$. Thus $\wn{R_i}\le\wn{T_i}+\delta$, rather than an exact equality. Unit increments give $k(J)\ge k_n-O(\log(n+2))$. All 28 source and marker residuals are therefore at most
+\[
+ e_n=C(n+2)^c2^{-k_n}.
+\]
+Actual mirrors, inverse mirrors and square-root-state commutators are $O(2^{-n/2})$, and fit the same bound because $k_n\le n/2$. For $C_*$ large the tolerance tends to zero and gives fixed marker visibility. Apply~\eqref{eq:extraction} with $\clog(1/e_n)=k_n-O(\log n)$. This is~\eqref{eq:lower-profile}, on the original mixed state before taking any infimum.
+
+Distillable entanglement is bounded by formation and by the logarithm of local dimension; on a pure state it equals its entropy. The maximally entangled upper strategies therefore squeeze all four demands into~\eqref{eq:profile}. Their losses tend to zero, proving value one. To exclude finite perfection for every unbounded count, including counts outside the lower-estimate regime, suppose a finite perfect strategy exists. Zero-error decoding gives an exact model on the support of its marginal state. Exact state commutators make that support invariant and the restricted state a faithful trace on the decoded algebra. The complete Cantor clock has $2^M$ mutually orthogonal binary cylinders of trace $2^{-M}$ at every depth $M$, by~\cite[Lemma 4.1, fair-cylinder identity (4.3)]{UP}. All these projections are nonzero, forcing dimension at least $2^M$ for every $M$, a contradiction.
+\end{proof}
+
+\begin{corollary}[Prescribed regular speeds]\label{cor:regular}
+For every regular $F$ there is a game satisfying part~1 of Theorem~\ref{thm:main}. In particular $A_G(n)=2^{F(n)(1+o(1))}$, with the same law for $d_G(n)$.
+\end{corollary}
+\begin{proof}
+Set $c=\lfloor F(0)/2\rfloor$ and
+\[
+ k(J)=\lfloor F(2J)/2\rfloor-c.
+\]
+This starts at zero, is unbounded and has increments in $\{0,1\}$. A finite program stores the count and at the next pulse compares it with $\lfloor F(2J+2)/2\rfloor-c$, retaining the same initial offset. The logarithmic-space computation has only polynomially many complete configurations, including its input head, bounded output and bookkeeping. Since it halts, its time is polynomial. Stack encodings of its work tapes have polynomial values and can be simulated by unary counters in polynomially many elementary instructions. Recomputing each target and emitting its difference therefore gives polynomial total pulse delay. Apply Theorem~\ref{thm:profile}. The main term differs from $F(n)$ by $O(1)$. Both $\log n=o(F(n))$ and $\log^2(F(n)+2)=o(F(n))$.
+\end{proof}
+
+Examples include integer-rounded rational powers $n^a$ for $0<a<1$, integer powers of $\log(n+2)$ above one, and suitable effective versions of $n/\log(n+2)$ or $2^{\sqrt{\log n}}$, after a finite initial prefix change. For an example $\lfloor n/g(n)\rfloor$, monotonicity of $g$ alone is insufficient: one must also verify monotonicity and unit increments of the quotient. Indeed $g(n)=2^{\lfloor\lfloor\clog n\rfloor/2\rfloor}$ makes that quotient drop at powers of four.
+
+\begin{corollary}[Subscale space]\label{cor:space}
+The relative conclusion $\clog X(n)=F(n)(1+o(1))$ remains valid when the regular target's space bound is replaced by a total computation in space $S(n)=o(F(n))$, including input and output bookkeeping. The sharper additive error of Corollary~\ref{cor:regular} is not asserted.
+\end{corollary}
+\begin{proof}
+Apply the prefix-maximum and time-charge argument of~\cite[Corollary Q5.1]{UP} to the density-free estimate of Theorem~\ref{thm:profile}. The changed normalization requires $S_*(n)=\max_{j\le n}S(j)+O(\log(n+2))=o(F(n))$, which follows from monotonicity of $F$. A horizon shift $O(S_*)$ then loses only $o(F)$ unit increments, and the logarithms of the computation and localization costs are $o(F)$. The new source error $O(\log^2 F)$ is also $o(F)$. These substitutions give the stated relative law; no sharper additive bound is imported.
+\end{proof}
+
+\begin{corollary}[The intermediate band and a matched root scale]\label{cor:band}
+There is one fixed game for which each $X=A_G,d_G,p_G,f_G$ obeys
+\[
+ \frac{X(n)}{n^m}\longrightarrow\infty\quad(m>0),\qquad
+ \frac{\clog X(n)}n\longrightarrow0.
+\]
+The root-count game $k(J)=\lfloor J^{3/4}\rfloor$ has
+\[
+ \clog X(n)=2\lfloor\lfloor n/2\rfloor^{3/4}\rfloor+O(\log^2(n+2)).
+\]
+The count $k(J)\sim J/\clog J$ yields $\clog X(n)=(1+o(1))n/\clog n$.
+\end{corollary}
+\begin{proof}
+The root count is legal. Its finite counter implementation can find the next increment by integer comparisons $K^4\le J^3$, using polynomially many unary instructions at pulse $J$. For the near-exponential example, stage $r$ has $2^r$ pulses and emits one at zero-based positions divisible by $r$. A prefix of length $v$ in that stage contributes $\lceil v/r\rceil$ ones. The completed-stage sum satisfies
+\[
+ \sum_{t<r}2^t/t=2^r/r+O(2^r/r^2).
+\]
+To see this, put $t=r-s$, expand $1/(r-s)=1/r+O(s/r^2)$ for $s\le r/2$, and bound the remaining geometric tail. Ceiling errors total $O(r)$. Thus throughout the stage $k(J)=J/r+O(2^r/r^2+r)=J/\clog J\,(1+O(1/\log J))$. Copying and doubling the epoch length costs $O(2^r)$ instructions; reloading the spacing countdown costs $O(r\lceil2^r/r\rceil)$, and the remaining work is linear in the stage length. Even a partial stage costs $O(2^r)=O(J+1)$, giving linear total pulse delay. In either example $k/\log J\to\infty$ and $k=o(J)$, so~\eqref{eq:profile} proves the formulas and the two band limits. Monotonicity between adjacent dyadic tolerances extends these assertions to general $\eps$.
+\end{proof}
+
+The root example gives $\log D_G(\eps)=\exp((\log(1/\eps))^{3/4+o(1)})$. In dimension itself, the band lies above $2^{n^m}$ for every fixed $m$ and below $2^{2^{an}}$ for every $a>0$, eventually. The operational quantity is measured in bits and is matched to $A_G$, not to $D_G$.

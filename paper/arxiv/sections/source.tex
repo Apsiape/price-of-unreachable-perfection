@@ -1,0 +1,62 @@
+\section{One source model with every spectral tail}\label{sec:source}
+The marked affine lamp presentation in~\cite[Section P2]{UP} has six unitary letters $p,q,t,d,x,z$, 27 certificate words of~\cite[Definition 7.1]{Game} and the marker $J=(xz)^2$. Write $R_w=(w-I)/2$ and $R_J=(J+I)/2$. We retain that fixed presentation and change only the finite list used in its Clifford construction. The certificate separates 23 host words from four lamp words. The host verification is independent of the list; the four lamp residuals are controlled by its character sums.
+
+\begin{lemma}[Uniform tail]\label{lem:tail}
+For every integer $N\ge1$ the marked presentation has a flat unitary assignment with $x^2=z^2=I$, $J=-I$, and
+\begin{equation}\label{eq:source-dim}
+ \clog D_N\le 3N+(4M+4)^2+2\clog M,
+ \qquad M=\max\{48,\lceil N^{1/4}\rceil\}.
+\end{equation}
+Every host residual has operator norm at most $C_hN^{-1/2}$, where $C_h=24\pi$. Each lamp residual satisfies, simultaneously for every $\kappa>0$,
+\begin{equation}\label{eq:tail}
+ \tr\bigl(1_{(\kappa,1]}(|R_w|)\bigr)
+ \le\sqrt2\exp(-N\kappa^2/16).
+\end{equation}
+The same assignment, for every real $\nu>0$, satisfies
+\begin{equation}\label{eq:moments}
+ \tr(|R_w|^{2\nu})\le
+ \sqrt2\left(\frac{16\nu}{eN}\right)^\nu+
+ \left(\frac{C_h^2}{N}\right)^\nu.
+\end{equation}
+For nondecreasing $f:[0,1]\to[0,\infty)$ and $C_h/\sqrt N\le\kappa\le1$, every residual obeys
+\begin{equation}\label{eq:split}
+ \tr(f(|R_w|)^2)\le f(\kappa)^2+
+ \sqrt2 f(1)^2\exp(-N\kappa^2/16).
+\end{equation}
+The assignments can be selected effectively.
+\end{lemma}
+\begin{proof}
+Put $r=4M+4$. For an arbitrary list $\zeta_1,\ldots,\zeta_N\in\Ftwo^r$, with repetitions and zero entries allowed, define
+\[
+ v_u=N^{-1/2}\bigl((-1)^{\langle\zeta_j,u\rangle}\bigr)_{j=1}^N,
+ \qquad D_u=\operatorname{diag}\bigl((-1)^{\langle\zeta_j,u\rangle}\bigr).
+\]
+Every $v_u$ is a real unit vector and $D_uv_w=v_{u+w}$. On the full exterior space of $\C^{3N}$, second quantization gives a genuine representation
+\[
+ U_u=\Lambda(D_u\otimes I_3),\qquad U_uU_w=U_{u+w}.
+\]
+Use the overlapping-qubit Majorana construction of Chao--Reichardt--Sutherland--Vidick~\cite{CRSV}, with three copies $A_u,B_u,C_u$ associated with $v_u$, and set $X_u=iA_uB_u$, $Z_u=iA_uC_u$. The canonical anticommutation relations give reflections, exact onsite anticommutation, $(X_uZ_u)^2=-I$, and affine covariance under $U_u$. These identities use only unit norm and $D_uv_w=v_{u+w}$. They require no independence or distinctness of the list. Using the full exterior space also avoids any projective lifting issue on an irreducible Clifford module.
+
+Induce over $\mathrm{GL}(r,2)$ and use the clock and holonomy correction of~\cite[Section P2]{UP}. Their certificate calculation gives zero residual on host rows 5, 10--22 and 27; the other host rows have norm at most $3h_M$, where $h_M\le8\pi M^{-2}$. Therefore every host row is bounded by $24\pi N^{-1/2}$. The only dependence on the list is in the four lamp words, involving $t,x,z$. On a block indexed by $g\in\mathrm{GL}(r,2)$ their two labels are $0$ and $u=g^{-1}e_1$. Put
+\[
+ c(u)=\langle v_0,v_u\rangle
+      =N^{-1}\sum_{j=1}^N(-1)^{\langle\zeta_j,u\rangle}.
+\]
+For the two mixed words, the additive commutator is $2c(u)B_0C_u$; multiplication by a unitary converts it to the normalized group residual. Its absolute value is $|c(u)|I$. For the two same-type words, the CAR identity gives residual norm $2|c(u)|\sqrt{1-c(u)^2}\le2|c(u)|$. Clock coordinates repeat these blocks with equal multiplicity. Transitivity makes $g^{-1}e_1$ exactly uniform over the nonzero vectors. Thus each tail is bounded by $\Pr_u(2|c(u)|>\kappa)$, with $u\ne0$ uniform.
+
+Choose the list independently and uniformly. For fixed nonzero $u$, $S=Nc(u)$ is a sum of $N$ independent Rademacher signs. With $Z$ standard Gaussian,
+\[
+ \mathbb E\exp(S^2/(4N))
+ =\mathbb E_Z\cosh\bigl(Z/\sqrt{2N}\bigr)^N
+ <\mathbb E_Z e^{Z^2/4}=\sqrt2.
+\]
+The strict inequality follows from $\cosh y<e^{y^2/2}$ for $y\ne0$. Average over nonzero $u$ and then over lists. Some list has
+\[
+ \Phi=\frac1{2^r-1}\sum_{u\ne0}e^{Nc(u)^2/4}<\sqrt2.
+\]
+Fix this one list. Markov's inequality gives~\eqref{eq:tail} for every threshold at once. This is an average over affine blocks, not a maximum over labels. Independence between different $u$ is unused. Effectiveness follows by dovetailing certified interval comparisons for the finitely many lists until a strict comparison $\Phi<\sqrt2$ is certified. We do not ask an algorithm to decide equality of computable reals.
+
+The full space has dimension $M^2|\mathrm{GL}(r,2)|2^{3N}$. Since $\clog|\mathrm{GL}(r,2)|\le r^2$, this proves~\eqref{eq:source-dim}, namely logarithmic dimension $3N+O(\sqrt N)$. For lamp words, apply $y^\nu\le(\nu/e)^\nu e^y$ with $y=Nc(u)^2/4$. This gives the first term in~\eqref{eq:moments}; the host estimate gives the second. The list is unchanged as $\nu$ varies. Finally split the spectral measure at $\kappa$. The host tail vanishes above $C_h/\sqrt N$ and the lamp tail is bounded by~\eqref{eq:tail}, proving~\eqref{eq:split}. If the interval for $\kappa$ is empty, the split assertion is unused.
+\end{proof}
+
+The lemma is stronger than a separate fixed-order moment family. A list chosen for bounded independence can have an exceptional norm-one block. Uniform control in the moment order cannot be inferred from that earlier family. Here the exponential-moment average supplies the additional information directly, without an additional dimension exponent.
