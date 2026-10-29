@@ -1,0 +1,13 @@
+exact multiset enumeration: n=1, N=1..8, expectation and selected-list tails/moments PASS
+exact multiset enumeration: n=2, N=1..7, expectation and selected-list tails/moments PASS
+exact multiset enumeration: n=3, N=1..5, expectation and selected-list tails/moments PASS
+multisets checked: 1659
+full exterior-Fock space dim=64, 5 degenerate/nondegenerate lists: representation, covariance, marker, lamp residuals PASS; max error=8.88e-16
+B count conversion PASS; n/g monotonicity counterexample: F(15)=7, F(16)=4
+E legal dyadic-epoch logarithmic counts for m=3/2,7,101/3,200: bounded O_m(1) discrepancy PASS
+D exact event simulation 0/1: completed stages=8, last stage ends=[(4, 11, 0.6363636363636364, 0.0), (5, 14, 0.9285714285714286, 1.0), (6, 78, 0.16666666666666666, 0.0), (7, 81, 0.9876543209876543, 1.0)]
+D exact event simulation 1/1: completed stages=30, last stage ends=[(26, 101, 1.0, 1.0), (27, 106, 1.0, 1.0), (28, 111, 1.0, 1.0), (29, 116, 1.0, 1.0)]
+D exact event simulation 0/0: completed stages=30, last stage ends=[(26, 101, 0.12871287128712872, 0.0), (27, 106, 0.12264150943396226, 0.0), (28, 111, 0.11711711711711711, 0.0), (29, 116, 0.11206896551724138, 0.0)]
+D exact event simulation 0.3/0.8: completed stages=16, last stage ends=[(12, 654, 0.3012232415902141, 0.3), (13, 658, 0.7978723404255319, 0.8), (14, 1750, 0.3, 0.3), (15, 1754, 0.7998859749144812, 0.8)]
+independent threshold/penalty bounds and exact diagonal-wall catch-up inequalities PASS
+ALL INDEPENDENT FINITE CHECKS PASSED

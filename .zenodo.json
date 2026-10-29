@@ -2,7 +2,7 @@
   "title": "The price of unreachable perfection: dimension laws at every regular scale",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "creators": [
     {
       "name": "Douglas, Seth"
@@ -22,12 +22,17 @@
   "access_right": "open",
   "license": "cc-by-4.0",
   "language": "eng",
-  "notes": "Preprint. It has not been peer reviewed. Text and documentation: CC BY 4.0. Scripts: MIT or Apache 2.0.",
+  "notes": "Preprint. It has not been peer reviewed. Text and documentation: CC BY 4.0. Scripts: MIT or Apache 2.0. Version 1.0.1 changes packaging only (recorded check outputs restored; manifests verify from a fresh clone); the paper is unchanged.",
   "related_identifiers": [
     {
       "identifier": "10.5281/zenodo.23753741",
       "scheme": "doi",
       "relation": "references"
+    },
+    {
+      "identifier": "10.5281/zenodo.23754199",
+      "scheme": "doi",
+      "relation": "isNewVersionOf"
     }
   ]
 }

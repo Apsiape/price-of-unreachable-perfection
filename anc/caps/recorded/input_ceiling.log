@@ -1,0 +1,57 @@
+{
+ "m4_n2_N3": {
+  "max_new_residual": 0.0,
+  "checks": 12096
+ },
+ "m4_n2_N4": {
+  "max_new_residual": 0.0,
+  "checks": 48384
+ },
+ "m3_n2_N3": {
+  "max_new_residual": 0.0,
+  "checks": 12096
+ },
+ "m3_n2_N4": {
+  "max_new_residual": 0.0,
+  "checks": 48384
+ },
+ "m8_n2_N3": {
+  "max_new_residual": 0.0,
+  "checks": 12096
+ },
+ "m8_n2_N4": {
+  "max_new_residual": 0.0,
+  "checks": 48384
+ },
+ "m9_n3_N3": {
+  "max_new_residual": 0.0,
+  "checks": 12096
+ },
+ "m9_n3_N4": {
+  "max_new_residual": 0.0,
+  "checks": 48384
+ },
+ "m5_n3_N3": {
+  "max_new_residual": 0.0,
+  "checks": 12096
+ },
+ "m5_n3_N4": {
+  "max_new_residual": 0.0,
+  "checks": 48384
+ },
+ "m2_n3_N3": {
+  "max_new_residual": 0.0,
+  "checks": 12096
+ },
+ "m2_n3_N4": {
+  "max_new_residual": 0.0,
+  "checks": 48384
+ }
+}
+m4_n2 beta_nominal=2.0000 implied exponents: {'sharp': 1.0014549494873235, 'smooth': 2.0028944140224505}
+m8_n2 beta_nominal=3.0000 implied exponents: {'sharp': 1.0005138930392508, 'smooth': 2.6989388736528555}
+m9_n3 beta_nominal=2.0000 implied exponents: {'sharp': 1.007612145266417, 'smooth': 1.9927141109647504}
+m4_n2 max |T|/|S| = 1.995621113184684 <= n = 2
+m8_n2 max |T|/|S| = 1.9962033369813814 <= n = 2
+m9_n3 max |T|/|S| = 2.9943431688549853 <= n = 3
+ALL CHECKS PASSED

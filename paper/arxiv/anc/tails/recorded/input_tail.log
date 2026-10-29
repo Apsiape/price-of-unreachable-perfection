@@ -1,0 +1,21 @@
+n = 16, number of nonzero u = 65535
+N=64: E-list avg exp(Nc^2/4) over 5 lists = [1.408, 1.411, 1.406, 1.404, 1.407] (bound sqrt2=1.414 in mean)
+   tail (kappa*sqrtN, fraction, bound) = [(2.0, '3.28e-02', '5.20e-01'), (3.0, '1.50e-03', '1.49e-01'), (4.0, '1.53e-05', '2.59e-02'), (5.0, '0.00e+00', '2.73e-03')]
+   moment/bound ratios (nu, ratio) = [(1, 0.48), (2, 0.241), (4, 0.057), (8, 0.002), (16, 0.0)]
+N=256: E-list avg exp(Nc^2/4) over 5 lists = [1.408, 1.418, 1.409, 1.416, 1.418] (bound sqrt2=1.414 in mean)
+   tail (kappa*sqrtN, fraction, bound) = [(2.0, '3.86e-02', '5.20e-01'), (3.0, '2.12e-03', '1.49e-01'), (4.0, '1.53e-05', '2.59e-02'), (5.0, '0.00e+00', '2.73e-03')]
+   moment/bound ratios (nu, ratio) = [(1, 0.479), (2, 0.243), (4, 0.059), (8, 0.002), (16, 0.0)]
+N=1024: E-list avg exp(Nc^2/4) over 5 lists = [1.405, 1.412, 1.416, 1.409, 1.411] (bound sqrt2=1.414 in mean)
+   tail (kappa*sqrtN, fraction, bound) = [(2.0, '4.11e-02', '5.20e-01'), (3.0, '2.62e-03', '1.49e-01'), (4.0, '1.53e-05', '2.59e-02'), (5.0, '0.00e+00', '2.73e-03')]
+   moment/bound ratios (nu, ratio) = [(1, 0.478), (2, 0.244), (4, 0.061), (8, 0.002), (16, 0.0)]
+N=4096: E-list avg exp(Nc^2/4) over 5 lists = [1.412, 1.408, 1.415, 1.412, 1.412] (bound sqrt2=1.414 in mean)
+   tail (kappa*sqrtN, fraction, bound) = [(2.0, '4.31e-02', '5.20e-01'), (3.0, '2.40e-03', '1.49e-01'), (4.0, '4.58e-05', '2.59e-02'), (5.0, '0.00e+00', '2.73e-03')]
+   moment/bound ratios (nu, ratio) = [(1, 0.479), (2, 0.242), (4, 0.059), (8, 0.002), (16, 0.0)]
+bounded-independence list (first coord 1): c(u*) = -1.000 (norm-one exceptional block, mass 1/(2^n-1))
+   nu=1: avg|c|^(2nu) * N^nu = 9.844e-01   (uniform list would give <= sqrt2 (4nu/e)^nu = 2.081e+00)
+   nu=2: avg|c|^(2nu) * N^nu = 1.880e+01   (uniform list would give <= sqrt2 (4nu/e)^nu = 1.225e+01)
+   nu=4: avg|c|^(2nu) * N^nu = 1.678e+07   (uniform list would give <= sqrt2 (4nu/e)^nu = 1.698e+03)
+   nu=8: avg|c|^(2nu) * N^nu = 1.845e+19   (uniform list would give <= sqrt2 (4nu/e)^nu = 5.216e+08)
+   nu=16: avg|c|^(2nu) * N^nu = 2.230e+43   (uniform list would give <= sqrt2 (4nu/e)^nu = 1.261e+22)
+   nu=32: avg|c|^(2nu) * N^nu = 3.259e+91   (uniform list would give <= sqrt2 (4nu/e)^nu = 4.828e+53)
+PASS

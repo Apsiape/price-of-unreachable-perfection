@@ -1,0 +1,2 @@
+lamp residual check: {'mixed_dev_from_|c|I': 6.661338147750939e-16, 'same_ratio_to_2|c|sqrt(1-c^2)': 1.0000000000000007, 'J_plus_I': 0.0, 'reflection_dev': 4.440892098500626e-16}
+PASS

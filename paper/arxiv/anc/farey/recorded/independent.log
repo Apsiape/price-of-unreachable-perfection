@@ -1,0 +1,9 @@
+PASS Farey: 1760 exhaustive denominator levels; mediant agreement, determinants, monotonicity, universal bound
+PASS coarse-window coverage: every exterior neighbor is a Coxeter-seed value or its complement; seed dimensions equal reduced denominators
+PASS continued-fraction product formula: 630 exact semiconvergent steps, including irregular large quotients
+PASS variance lower bound: 33910 exact two-support mixtures; near neighbors minimize the variance
+PASS KRS dimension bookkeeping: 982 reduced base values; 4397 whole-window transports
+PASS Pauli central products: 1,2,3 sites; orders, normal forms, centers, lamp relations; 33280 associative triples
+PASS affine presentation identities: AGL(3,2) has 1344 elements, 168-element zero stabilizer, double transitivity, all displayed relations
+PASS affine hashes: 256 hashes, all 56 ordered collision probabilities exactly 1/4, covariance, 3072 Pauli sign checks; collision negative control detected
+ALL INDEPENDENT CHECKS PASSED (1.51 seconds, one thread)

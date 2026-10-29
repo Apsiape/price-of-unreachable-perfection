@@ -1,0 +1,5 @@
+bounded quotients            mu=2.00  predicted (lower, upper) = (0.2500, 0.2500)   observed at the last two levels = (0.2484, 0.2531)
+mu=3                         mu=3.00  predicted (lower, upper) = (0.2000, 0.3333)   observed at the last two levels = (0.2001, 0.3319)
+mu=4                         mu=4.00  predicted (lower, upper) = (0.1667, 0.3750)   observed at the last two levels = (0.1667, 0.3745)
+mu=6                         mu=6.00  predicted (lower, upper) = (0.1250, 0.4167)   observed at the last two levels = (0.1250, 0.4160)
+mu=10                        mu=10.00  predicted (lower, upper) = (0.0833, 0.4500)   observed at the last two levels = (0.0833, 0.4494)

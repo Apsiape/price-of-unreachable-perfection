@@ -1,0 +1,126 @@
+{
+  "status": "PASS",
+  "root_machine": {
+    "outputs": 48,
+    "ones": 18,
+    "elementary_instructions": 18472747,
+    "controls": 204,
+    "registers": 10
+  },
+  "root_histories": {
+    "exact_sampled_transitions": 39081,
+    "sampled_ages": 3100,
+    "reset_periods": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768,
+      65536,
+      131072,
+      262144,
+      524288,
+      1048576,
+      2097152,
+      4194304,
+      8388608,
+      16777216
+    ],
+    "input_values": 21,
+    "verified_stop_levels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ]
+  },
+  "near_machine": {
+    "outputs": 200000,
+    "ones": 12907,
+    "elementary_instructions": 4391786,
+    "controls": 33,
+    "registers": 6
+  },
+  "matrix_checks": {
+    "column_decompositions": 8,
+    "discarded_columns": 168,
+    "noncommuting_pairs": 51,
+    "ordered_identities": 180,
+    "arithmetic": "exact rational matrices"
+  },
+  "scalar_checks": {
+    "all_binary_words": 16382,
+    "prefix_inequalities": 196610,
+    "root_envelope_orders": 200,
+    "includes_zero_words": true
+  },
+  "source_moment_checks": {
+    "finite_field_moments": [
+      {
+        "r": 1,
+        "N": 8,
+        "character_space_dimension": 4,
+        "enumerated_characters": 16,
+        "exact_sum_power_moment": 128
+      },
+      {
+        "r": 2,
+        "N": 8,
+        "character_space_dimension": 10,
+        "enumerated_characters": 1024,
+        "exact_sum_power_moment": 180224
+      },
+      {
+        "r": 3,
+        "N": 8,
+        "character_space_dimension": 16,
+        "enumerated_characters": 65536,
+        "exact_sum_power_moment": 385875968
+      }
+    ],
+    "uniform_dimension_cases": 2100,
+    "dimension_envelope_B": 65536,
+    "dimension_envelope_q": 2
+  },
+  "finite_clocks_and_stages": {
+    "clock_column_cases": 126,
+    "reset_basis_cases": 5460,
+    "clock_bits": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "large_stage_prefixes": 900,
+    "max_scaled_stage_error_from_stage_8": 4.28125
+  },
+  "elapsed_seconds": 7.178361799917184,
+  "scope": "finite checks; no reconstruction of compiler or distillation theorem"
+}

@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "counter": {
+    "controls": 204,
+    "registers": 10,
+    "pulses": 40,
+    "instructions": 9164425,
+    "largest_counter": 65536,
+    "max_observed_time_ratio": 53.3125,
+    "table": [
+      {
+        "j": 1,
+        "k": 1,
+        "instructions": 853,
+        "instructions_over_j_plus_1_pow_4": 53.3125
+      },
+      {
+        "j": 2,
+        "k": 1,
+        "instructions": 1103,
+        "instructions_over_j_plus_1_pow_4": 13.617283950617283
+      },
+      {
+        "j": 4,
+        "k": 2,
+        "instructions": 4073,
+        "instructions_over_j_plus_1_pow_4": 6.5168
+      },
+      {
+        "j": 8,
+        "k": 4,
+        "instructions": 28013,
+        "instructions_over_j_plus_1_pow_4": 4.269623532998018
+      },
+      {
+        "j": 16,
+        "k": 8,
+        "instructions": 311541,
+        "instructions_over_j_plus_1_pow_4": 3.7300918331916524
+      },
+      {
+        "j": 32,
+        "k": 13,
+        "instructions": 3913283,
+        "instructions_over_j_plus_1_pow_4": 3.299783881051099
+      },
+      {
+        "j": 40,
+        "k": 15,
+        "instructions": 9164425,
+        "instructions_over_j_plus_1_pow_4": 3.243170600769138
+      }
+    ]
+  },
+  "history": {
+    "scalar_transitions": 24570,
+    "arithmetic": "exact Fractions",
+    "periods": [
+      2,
+      8,
+      32,
+      128,
+      512,
+      2048
+    ],
+    "input_count": 9,
+    "scope": "complete controller and calibration scalar equations on these periods; no lamp source"
+  },
+  "elapsed_seconds": 15.055275900056586
+}

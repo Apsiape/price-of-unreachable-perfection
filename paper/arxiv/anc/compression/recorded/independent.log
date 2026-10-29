@@ -1,0 +1,5 @@
+Table5_exhaustive 410956 PASS
+stopping_cap_6_5 400 PASS
+conditional_corner_rank_6_6 800 PASS
+conditional_schedule_and_cost 202 PASS
+{"PASS": true, "groups": 4, "elapsed_seconds": 0.16333746910095215, "total_checks": 412358}
